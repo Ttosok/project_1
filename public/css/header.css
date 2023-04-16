@@ -1,0 +1,707 @@
+/* for everything tempertoly */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* for more then one used */
+.containter-logo{ /* head-left and head-right-middle */
+    position: relative;
+    height: 66px;
+}
+.containter-logo img{
+    object-fit: contain;
+    object-position: center;
+    height: 100%;
+}
+.hidden{
+    display: none !important;
+    opacity: 0;
+}
+.focus{
+    background-color: #2a0024;
+}
+.focus img{
+    filter: invert(100%);
+}
+.focus .txt_forcus{
+    color: white;
+}
+.captured{
+    transform: translateY(-40px);
+}
+.captured.focus{
+    transform: translateY(0);
+    background-color: white;
+}
+.moving{
+    transition: all ease-in-out .4s;
+}
+/* clears the 'X' from Internet Explorer */
+input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal {  display: none; width : 0; height: 0; }
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+/* contain for header */
+#header_content{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 4;
+    font-family: roboto-regular,sans-serif;
+    /* font-family: roboto-bold,sans-serif; */
+}
+.head_containter-layout{  /* height 40px if smaller then 750px width| height 66px + menu show if smaller then 990px width| no menu same height */
+    position: relative;
+    height: 66px;
+    background-color: white;
+    z-index: 3;
+    transition-duration: .7s;
+}
+.head_containter-sort{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 100%;
+    padding: 0 .5rem;
+    margin: auto;
+    max-width: 90%;
+    transition-delay: .5s;
+    transition-duration: .7s;
+}
+/* head_left for the left side of header */
+.head_left{
+    order: 0;
+    height: 100%;
+    width: auto;
+    flex-flow: row nowrap;
+    display: flex;
+    align-items: center;
+}
+.btn_menu{
+    display: flex;
+    flex-flow: column wrap;
+    width: 2.1875rem;
+    order: 0;
+    box-sizing: content-box;
+    padding: .25rem;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 1.75rem;
+    height: 100%;
+}
+.btn_menu-icon{
+    display: block;
+    width: 100%;
+    height: 2rem;
+    position: relative;
+    transition: .5s ease;
+    cursor: pointer;
+    /* transition: ease all 500ms; */
+}
+.btn_menu-icon span.hidden{
+    opacity: 0;
+    height: 0;
+    display: block !important;
+}
+.btn_menu-icon span{
+    transition: opacity 2.4s ease-out;
+    opacity: 1;
+    height: 100%;
+    display: block;
+}
+.btn_menu-icon span img{
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+.btn_menu-open{
+    /* height: 35%; */
+    width: 100%;
+    font-size: .75rem;
+    line-height: 1.5;
+    text-transform: capitalize;
+    padding-top: .15rem;
+}
+#head-logo{
+    order: 1;
+    position: relative;
+    margin-right: .55rem;
+}
+/* head_right for the right side of header */
+.head_right{
+    order: 1;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 1;
+    justify-content: flex-end;
+}
+/* head_right-middle right middle for the middle of the right header */
+.head_right-middle{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.mobie_head-logo{
+    display: flex;
+    justify-content: center;
+}
+#head-search{
+    display: block;
+    margin-left: 2.5rem;
+    max-width: 25rem;
+    width: 100%;
+}
+.search-inbox{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    margin: 0.5rem;
+    margin-left: 0;
+}
+.search-input{
+    padding: 0.375rem 7rem 0.375rem 0.75rem;
+    height: 3.125rem;
+    border: 1px solid;
+    width: 100%;
+}
+.search-input:focus{
+    outline: none;
+    box-shadow: 0 0 0 0.1875rem #fff, 0 0 0 0.25rem #8f8f8f;
+}
+.restart{
+    height: 1rem;
+    width: 1rem;
+    position: absolute;
+    border: none;
+    background-color: white;
+    right: 4rem;
+    cursor: pointer;
+}
+.btn_closed{
+   height: 100%;
+}
+.search-logo{
+    height: 3rem;
+    width: 3rem;
+    background-color: aqua;
+    right: 0.0625rem;
+    position: absolute;
+    border: none;
+    cursor: pointer;
+}
+.btn_search{
+    width: 1.925rem;
+    height: 1.925rem;
+    /* background-color: black; */
+}
+/* head_right-right far right for the right of the right header */
+.head_right-right.containter_tool{
+    flex: .75;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-end;
+}
+.containter_tool-search{
+    order: 0;
+    position: relative;
+    height: 100%;
+    cursor: pointer;
+    margin: 0 4px;
+}
+#searchlink{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    border: solid 0.125rem transparent;
+    padding: 0 0.625rem;
+    min-width: 1.25rem;
+    text-decoration: none;
+    color: black;
+    height: 100%;
+    font-size: .75rem;
+    line-height: 1.5;
+}
+#searchlink > img{
+    vertical-align: middle;
+    overflow: hidden;
+    height: 30px;
+}
+#searchlink > span{
+    margin-top: 0.125rem;
+}
+#searchlink:hover{
+    background-color: #2a0024;
+    color: white;
+}
+#searchlink:hover > img{
+    filter: invert(100%);
+}
+#searchlink:hover > span{
+    color: white;
+}
+.containter_tool-support{
+    order: 2;
+    position: relative;
+    height: 100%;
+    cursor: pointer;
+    margin: 0 4px;
+}
+#supportlink{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    border: solid 0.125rem transparent;
+    padding: 0 0.625rem;
+    min-width: 1.25rem;
+    text-decoration: none;
+    color: black;
+    height: 100%;
+    font-size: .75rem;
+    line-height: 1.5;
+}
+#supportlink > img{
+    vertical-align: middle;
+    overflow: hidden;
+    height: 30px;
+}
+#supportlink > span{
+    margin-top: 0.125rem;
+}
+#supportlink:hover{
+    background-color: #2a0024;
+    color: white;
+}
+#supportlink:hover > img{
+    filter: invert(100%);
+}
+#supportlink:hover > span{
+    color: white;
+}
+.supportPopup{
+    display: block;
+    position: absolute;
+    min-width: 12.75rem;
+    left: -2.275rem;
+    top: 85%;
+    margin-top: .5rem;
+    background-color: white;
+    border-radius: 8px;
+    z-index: 10;
+}
+.supportPopup-layout{
+    display: flex;
+    position: relative;
+    box-shadow: none;
+}
+.supportPopup-sort{
+    list-style: none;
+    display: flex;
+    flex-flow: column wrap;
+}
+.supportPopup-sort > li{
+    width: 13.85rem;
+    min-height: 3.5rem;
+    position: relative;
+    border-bottom: 0.0625rem solid #eaeaea;
+}
+.supportPopup-sort > li a{
+    padding: 1rem;
+    border: 2px transparent solid;
+    margin-bottom: 0.5em;
+    position: absolute;
+    width: 100%;
+    color: #491040;
+    font-size: .875rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+.supportPopup-sort > li:hover{
+    background-color: #f2f2f2;
+}
+.supportPopup-sort > li:hover a{
+    color: #000;
+}
+.containter_tool-cart{
+    order: 3;
+    position: relative;
+    height: 100%;
+    cursor: pointer;
+    margin: 0 4px;
+}
+#cartlink{
+    color: black;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    border: solid 0.125rem transparent;
+    padding: 0 0.625rem;
+    min-width: 1.25rem;
+    text-decoration: none;
+    color: black;
+    height: 100%;
+    font-size: .75rem;
+    line-height: 1.5;
+}
+#cartlink > img{
+    vertical-align: middle;
+    overflow: hidden;
+    height: 30px;
+}
+#cartlink > span{
+    margin-top: 0.125rem;
+}
+#cartlink:hover{
+    background-color: #2a0024;
+    color: white;
+}
+#cartlink:hover > img{
+    filter: invert(100%);
+}
+#cartlink:hover > span{
+    color: white;
+}
+.containter_tool-account{
+    order: 1;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+    margin: 0 4px;
+}
+.account-layout{
+    border: solid 0.125rem transparent;
+    padding: 0 0.625rem;
+    height: 100%;
+    text-decoration: none;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    min-width: 143px;
+}
+.account-logo{
+    height: 40px;
+    min-width: 1.25rem;
+}
+.account-logo img{
+    height: 100%;
+}
+.account-text{
+    font-size: .75rem;
+    line-height: 1.25;
+    margin: 1px 0 0 8px;
+    display: flex;
+    flex-flow: column nowrap;
+    color: black;
+}
+.account-text span{
+    margin-top: 1px;
+}
+.account-text span:nth-child(1){
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+.account-text .icon{
+    margin: 0 0 0 25px;
+    width: .5rem;
+    flex-grow: .35;
+}
+.account-text span:nth-child(2){
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    font-weight: 400;
+    font-size: .9rem;
+}
+#loginlink{
+    text-decoration: underline;
+    margin: 0 5px 0 0 ;
+    box-sizing: content-box;
+    padding: 1px;
+    /* white-space: ; */
+}
+#registerlink{
+    text-decoration: underline;
+    margin: 0  0 0 5px ;
+    box-sizing: content-box;
+    padding: 1px;
+}
+.account-layout:hover{
+    background-color: #2a0024;
+    color: white;
+}
+.account-layout:hover img{
+    filter: invert(100%);
+}
+.account-layout:hover .account-text{
+    color: white;
+}
+.accountPopup{
+    display: block;
+    position: absolute;
+    min-width: 12.75rem;
+    left: -1.5rem;
+    top: 85%;
+    margin-top: .5rem;
+    background-color: white;
+    border-radius: 8px;
+    z-index: 10;
+}
+.accountPopup-layout{
+    display: flex;
+    position: relative;
+    box-shadow: none;
+}
+.accountPopup-sort{
+    list-style: none;
+    display: flex;
+    flex-flow: column wrap;
+}
+.accountPopup-sort > li{
+    width: 13.85rem;
+    min-height: 3.5rem;
+    position: relative;
+    border-bottom: 0.0625rem solid #eaeaea;
+}
+.accountPopup-sort > li a{
+    display: block;
+    padding: 1rem;
+    border: 2px transparent solid;
+    margin-bottom: 0.5em;
+    position: absolute;
+    width: 100%;
+    color: #491040;
+    font-size: .875rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+.accountPopup-sort > li:hover{
+    background-color: #f2f2f2;
+}
+.accountPopup-sort > li:hover a{
+    color: #000;
+}
+/* for the menu list toggle of the header */
+.head_containter-sort.menu-toggole{
+    position: relative;
+    width: 100%;
+    display: block;
+    padding: 0;
+    /* transition-delay: .5s;
+    transition-duration: .7s; */
+    z-index: 1;
+    margin: 0;
+    max-width: 100%;
+    /* transition-property: ; */
+}
+/*  */
+/* .menu-toggole{
+    background-color: blanchedalmond;
+} */
+/*  */
+.containter_unav{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 0 .5rem;
+    /* this one for more then 992px */
+    max-width: 90%;
+    width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+    justify-content: space-between; /* quenstionable cause can use center make more sense */
+}
+.unav_ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 100%;
+    position: relative;
+}
+/* this one for big screen website */
+.unav-li{
+    display: flex;
+    flex-flow: row nowrap;
+    height: 2.5rem;
+    text-transform: capitalize;
+    position: relative;
+}
+.unav-li:hover > .unav_list-hover, .unav_list-hover:hover{
+    display: flex;
+}
+.unav-li:not(:nth-child(-n + 3)) .unav_list-hover{
+    left: -350%;
+}
+.unav-htext{
+    border: 0.0625rem solid transparent;
+    padding: 0.5625rem 1.5rem;
+    color: #222;
+    font-size: .875rem;
+    font-weight: 400;
+    position: relative;
+}
+.unav-htext > a{
+    display: block;
+    text-decoration: none;
+}
+.unav_list-hover{
+    display: none;
+    position: absolute;
+    height: auto;
+    max-width: 55rem;
+    min-width: unset;
+    min-height: auto;
+    transition: none;
+    top: 2.5rem;
+    justify-content: flex-end;
+    left: 0;
+    z-index: 100;
+    /* color bonch */
+    background-color: antiquewhite;
+}
+.unav_list-hover::before{
+    display: block;
+    width: 100%;
+    position: absolute;
+    box-shadow: 0 0.3125rem 0.625rem -0.375rem rgb(0 0 0 / 50%);
+    background-color: purple;
+}
+.unav_list-layout{
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+    position: relative;
+    height: 100%;
+    padding: 1.25rem;
+    flex-basis: 25%;
+}
+.unav_list-layout li{
+    min-width: 11.5rem;
+    max-width: 11.5rem;
+    width: 100%;
+}
+.unav_list-layout > li:first-child{
+    margin-right: .5rem;
+}
+.unav_list-layout > li:not(:first-child,:last-child){
+    margin: 0 .5rem;
+}
+.unav_list-layout > li:last-child{
+    margin-left: .5rem;
+}
+.unav_list-link{
+    padding: 1.62rem 0 .15rem;
+    font-weight: 900;
+    font-size: .875rem;
+    line-height: 1.5;
+}
+.unav_list-link > a{
+    display: flex;
+    justify-content: flex-start;
+    border: solid 0.125rem transparent;
+    padding-left: 0.15rem;
+    text-decoration: none;
+    color: #222;
+    word-break: break-word;
+}
+.unav_list-link > a:hover{
+    text-decoration: underline;
+}
+.unav_list-hlist{
+    list-style: none;
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+    max-width: 100%;
+    margin: 0.125rem 0 0;
+    font-size: .875rem;
+    font-weight: 400;
+    /* text-align: left; */
+}
+.unav-hlist-link > a{
+    display: block;
+    color: #696158;
+    border: solid 0.125rem transparent;
+    padding: 0.425em 3rem 0.425em .15rem;
+    margin-right: 0.5rem;
+    text-decoration: none;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+.unav-hlist-link:hover{
+    text-decoration: underline;
+}
+.unav_list-sales{
+    padding: 1.62rem 0 0.15rem;
+}
+.unav_list-sales > a{
+    text-decoration: none;
+}
+.unav_list-sales > .sales-logo{
+    display: block;
+    margin: 0 0 1rem 0;
+}
+.unav_list-sales > .sales-logo img{
+    object-fit: contain;
+    width: 100%;
+    filter: none;
+}
+.unav_list-sales > .sales-logo:hover img{
+    box-shadow: 0 0 0.3125rem 0.0625rem #491040;
+}
+.unav_list-sales > .sales-text{
+    font-size: 0.875rem;
+    text-align: center;
+    padding-top: 0.5rem;
+}
+.unav_list-sales > .sales-text a{
+    text-decoration: none;
+    color: #491040;
+}
+.unav_list-sales > .sales-text:hover{
+    text-decoration: underline;
+}
+/* this one for molbie or smaller screen using slide way menu */
+.unav-item.side-menu{
+
+}
+.menu_content-htext{
+
+}
+.menu_content-side{
+
+}
+.menu_content-layout{
+
+}
+.menu_content-link{
+
+}
+.menu_content-dropout{
+
+}
+.dropout-hlist{
+
+}
+.dropout-hlist-link{
+
+}

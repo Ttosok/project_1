@@ -4,9 +4,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- <link rel="icon" href="../../views/img/logo.png"> -->
         <!-- <meta http-equiv= "X-AU-Compatible"> -->
-        <!-- <link rel="stylesheet" href="../../views/css/blog.css" type="text/css"> -->
         <!-- <link rel="stylesheet" href="../../views/css/chat.css" type="text/css"> -->
         <!-- <script src="/socket.io/socket.io.js"></script> -->
+        <link rel="stylesheet" href="../public/css/header.css" type="text/css">
+        <link rel="stylesheet" href="../public/css/main_body.css" type="text/css">
         <title>P.HA</title>
     </head>
     <body>
@@ -14,82 +15,107 @@
             <div class="head_containter-layout">
                 <div class="head_containter-sort">
                     <div class="head_left"> <!-- pc -> (big) logo / (small) logo + menu button | phone -> menu + search | scroll down show menu-->
-                        <button class="btn_menu hidden"> 
+                        <button class="btn_menu hidden"> <!-- hidden --> 
                             <div class="btn_menu-icon "> <!-- change icon of closed button base on the version of website -->
-                                <span><!-- <img src="../public/img/icons8-menu.svg" alt="menu dash"> --> ☰</span>
-                                <span><!-- <img src="../public/img/icons8-close.svg" alt="svg_closed"> -->x</span>
+                                <span><!-- <img src="../public/img/icons8-menu.svg" alt="menu dash"> --><img src="../public/img/icons8-menu.svg"/></span>
+                                <span class="hidden"><!-- <img src="../public/img/icons8-close.svg" alt="svg_closed"> --><img src="../public/img/icons8-close.svg"/></span>
                             </div>
                             <span class="btn_menu-open">menu</span>
                         </button>
-                        <div id="head-logo" >
-                            <div class="containter-logo">
-                                <a href="">
-                                    <img src="../public/img/logo-2868.png" alt="Logo">
+                        <div id="head-logo">
+                            <div class="containter-logo"> 
+                                <a href="#"> 
+                                    <img src="../public/img/logo-2868.png" alt="Logo"> 
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="head_right">
                         <div class="head_right-middle"> <!-- can change from search into logo -->
-                            <div class="mobie_head-logo">
+                            <div class="mobie_head-logo hidden">
                                 <div class="containter-logo">
-                                    <a href="">
+                                    <a href="#">
                                         <img src="../public/img/logo-2868.png" alt="Logo">
                                     </a>
                                 </div>
                             </div>
                             <div id="head-search"> <!-- row wrap -->
                                 <form class="search-inbox"> <!-- change search into a icon on the head_right-right and middle become hidden unstill got clicked -->
-                                    <input type="search" >
-                                    <button type="reset" class="restart">
-                                        <img src="../public/img/icons8-close.svg" alt="svg_closed" id="search-closed" class="btn_closed hidden">
+                                    <input type="search" class="search-input moving">
+                                    <button type="reset" class="restart hidden">
+                                        <img src="../public/img/icons8-close.svg" alt="svg_closed" id="search-closed" class="btn_closed">
                                     </button>
                                     <button type="submit" class="search-logo">
-                                        <img src="../public/img/search_glass.svg" alt="svg_search" id="search-img" class="btn_search">
+                                        <img src="../public/img/icons8-search.svg" alt="svg_search" id="search-img" class="btn_search">
                                     </button>
                                 </form>
                             </div>
                         </div>
                         <div class="head_right-right containter_tool"> <!-- row wrap | smaller = less tool(cart*) + show no text -->
-                            <div class="containter_tool-search"> <!-- cliked will make search-inbox show -->
-                                <a href="#" id="supportlink" class="">
-                                    <img src="../public/img/" alt="support logo">
+                            <div class="containter_tool-search hidden"> <!-- cliked will make search-inbox show -->
+                                <a href="#a" id="searchlink" class="">
+                                    <img src="../public/img/icons8-search.svg" alt="support logo">
                                     <span>search</span>
                                 </a>
                             </div>
                             <div class="containter_tool-support"> <!-- popup with click event in it -->
-                                <a href="#" id="supportlink" class="">
-                                    <img src="../public/img/" alt="support logo">
-                                    <span>support txt</span>
+                                <a href="#" id="supportlink" class="support-layout">
+                                    <img src="../public/img/Support.svg" alt="support logo">
+                                    <span class="txt_forcus">support txt</span>
                                 </a>
-                                <div class="supportPopup">
+                                <div class="supportPopup hidden">
                                     <nav class="supportPopup-layout">
                                         <ul class="supportPopup-sort">
-                                            <li><a href=""></a></li>
+                                             <!-- add more here -->
+                                            <li>  <!-- add hover effect -->
+                                                <a href="">frequently asked questions</a>
+                                            </li>
+                                            <li>  <!-- add hover effect -->
+                                                <a href="">track order</a>
+                                            </li>
+                                            <li>  <!-- add hover effect -->
+                                                <a href="">return</a>
+                                            </li>
+                                            <li>  <!-- add hover effect -->
+                                                <a href="">warranty</a>
+                                            </li>
+                                            <li>  <!-- add hover effect -->
+                                                <a href="">contact us</a>
+                                            </li>
                                         </ul>
                                     </nav>
                                 </div>
                             </div>
                             <div class="containter_tool-cart">
-                                <a href="" id="cartlink" class="">
-                                    <img src="../public/img/" alt="cart logo">
+                                <a href="#" id="cartlink" class="">
+                                    <img src="../public/img/icons8-shopping-cart.png" alt="cart logo">
                                     <span>cart txt</span>
                                 </a>
                             </div>
                             <div class="containter_tool-account">  <!-- popup with click event in it -->
-                                <a href="" class="account-layout">
+                                <div class="account-layout">
                                     <div class="account-logo">
                                         <img src="../public/img/user_icon.svg">
                                     </div>
-                                    <div class="account-text">
-                                        <span><p>Wellcome</p><img src="../public/img/arrow_down.svg"></span> <!-- go into login website -->
-                                        <span><p id="loginlink">Sign in</p> or <p id="registerlink">Register</p></span> <!-- go to register website -->
+                                    <div class="account-text txt_forcus">
+                                        <span>
+                                            Wellcome
+                                            <img src="../public/img/arrow_down.svg" class="icon">
+                                        </span> <!-- go into login website -->
+                                        <span>
+                                            <p id="loginlink">Sign in</p> or <p id="registerlink">Register</p>
+                                        </span> <!-- go to register website -->
                                     </div>
-                                </a>
-                                <div class="accountPopup">
+                                </div>
+                                <div class="accountPopup hidden">
                                     <nav class="accountPopup-layout">
                                         <ul class="accountPopup-sort">
-                                            <li><a href=""></a></li>
+                                            <li>
+                                                <a href="">signin / create account</a>
+                                            </li>
+                                            <li>
+                                                <a href="">track order</a>
+                                            </li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -103,17 +129,43 @@
                     <ul class="unav_ul"> <!-- row wrap -->
                         <li class="unav-li"> <!-- when hover main body have black cover ontop -->
                             <div class="unav-htext">
-                                <a href=""> men</a> 
+                                <a href="#"> men</a> 
                             </div>
-                            <div class="unav_list-hover">
+                            <div class="unav_list-hover ">
                                 <ul class="unav_list-layout">
-                                    <li >
+                                    <li>
+                                        <div class="unav_list-link"> <!-- Bold the txt -->
+                                            <a  href="">go to the link</a>
+                                        </div>
+                                        <div class="unav_list-link"> <!-- Bold the txt -->
+                                            <a  href="">go to the link</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="unav_list-link"> <!-- Bold the txt -->
+                                            <a  href="">go to the link</a>
+                                        </div>
+                                        <ul class="unav_list-hlist"> <!-- adding a hozon list of link for 1 main -->
+                                            <li class="unav-hlist-link">
+                                                <a href="">go to the link</a>
+                                            </li>
+                                            <!-- add more here unav-hlist-link -->
+                                            <li class="unav-hlist-link">
+                                                <a href="">go to the link</a>
+                                            </li>
+                                            <li class="unav-hlist-link">
+                                                <a href="">go to the link</a>
+                                            </li>
+                                        </ul>
                                         <div class="unav_list-link"> <!-- Bold the txt -->
                                             <a  href="">go to the link</a>
                                         </div>
                                     </li>
                                     <!-- add more here unav-li -->
                                     <li>
+                                        <div class="unav_list-link"> <!-- Bold the txt -->
+                                            <a  href="">go to the link</a>
+                                        </div>
                                         <ul class="unav_list-hlist"> <!-- adding a hozon list of link for 1 main -->
                                             <li class="unav-hlist-link">
                                                 <a href="">go to the link</a>
@@ -124,13 +176,237 @@
                                     <li> <!-- this for img on the left or ads-> always the last li -->
                                         <div class="unav_list-sales">
                                             <!-- adding sale or ads of items -->
+                                            <a href="" class="sales-logo">
+                                                <img src="../public/img/Sales/logo1.jpeg" alt="sale img"/>
+                                            </a>
+                                            <div class="sales-text">
+                                                <a href="">going where the sale img go to</a>
+                                            </div>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
                         </li>
+                        <li class="unav-li"> <!-- when hover main body have black cover ontop -->
+                            <div class="unav-htext">
+                                <a href="#">women</a> 
+                            </div>
+                            <div class="unav_list-hover ">
+                                <ul class="unav_list-layout">
+                                    <li>
+                                        <div class="unav_list-link"> <!-- Bold the txt -->
+                                            <a  href="">go to the link</a>
+                                        </div>
+                                        <div class="unav_list-link"> <!-- Bold the txt -->
+                                            <a  href="">go to the link</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="unav_list-link"> <!-- Bold the txt -->
+                                            <a  href="">go to the link</a>
+                                        </div>
+                                        <ul class="unav_list-hlist"> <!-- adding a hozon list of link for 1 main -->
+                                            <li class="unav-hlist-link">
+                                                <a href="">go to the link</a>
+                                            </li>
+                                            <!-- add more here unav-hlist-link -->
+                                            <li class="unav-hlist-link">
+                                                <a href="">go to the link</a>
+                                            </li>
+                                            <li class="unav-hlist-link">
+                                                <a href="">go to the link</a>
+                                            </li>
+                                        </ul>
+                                        <div class="unav_list-link"> <!-- Bold the txt -->
+                                            <a  href="">go to the link</a>
+                                        </div>
+                                    </li>
+                                    <!-- add more here unav-li -->
+                                    <li>
+                                        <div class="unav_list-link"> <!-- Bold the txt -->
+                                            <a  href="">go to the link</a>
+                                        </div>
+                                        <ul class="unav_list-hlist"> <!-- adding a hozon list of link for 1 main -->
+                                            <li class="unav-hlist-link">
+                                                <a href="">go to the link</a>
+                                            </li>
+                                            <!-- add more here unav-hlist-link -->
+                                        </ul>
+                                    </li>
+                                    <li> <!-- this for img on the left or ads-> always the last li -->
+                                        <div class="unav_list-sales">
+                                            <!-- adding sale or ads of items -->
+                                            <a href="" class="sales-logo">
+                                                <img src="../public/img/Sales/logo1.jpeg" alt="sale img"/>
+                                            </a>
+                                            <div class="sales-text">
+                                                <a href="">going where the sale img go to</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="unav-li"> <!-- when hover main body have black cover ontop -->
+                            <div class="unav-htext">
+                                <a href="#">equitment</a> 
+                            </div>
+                            <div class="unav_list-hover ">
+                                <ul class="unav_list-layout">
+                                    <li>
+                                        <div class="unav_list-link"> <!-- Bold the txt -->
+                                            <a  href="">go to the link</a>
+                                        </div>
+                                        <div class="unav_list-link"> <!-- Bold the txt -->
+                                            <a  href="">go to the link</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="unav_list-link"> <!-- Bold the txt -->
+                                            <a  href="">go to the link</a>
+                                        </div>
+                                        <ul class="unav_list-hlist"> <!-- adding a hozon list of link for 1 main -->
+                                            <li class="unav-hlist-link">
+                                                <a href="">go to the link</a>
+                                            </li>
+                                            <!-- add more here unav-hlist-link -->
+                                            <li class="unav-hlist-link">
+                                                <a href="">go to the link</a>
+                                            </li>
+                                            <li class="unav-hlist-link">
+                                                <a href="">go to the link</a>
+                                            </li>
+                                        </ul>
+                                        <div class="unav_list-link"> <!-- Bold the txt -->
+                                            <a  href="">go to the link</a>
+                                        </div>
+                                    </li>
+                                    <!-- add more here unav-li -->
+                                    <li>
+                                        <div class="unav_list-link"> <!-- Bold the txt -->
+                                            <a  href="">go to the link</a>
+                                        </div>
+                                        <ul class="unav_list-hlist"> <!-- adding a hozon list of link for 1 main -->
+                                            <li class="unav-hlist-link">
+                                                <a href="">go to the link</a>
+                                            </li>
+                                            <!-- add more here unav-hlist-link -->
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="unav-li"> <!-- when hover main body have black cover ontop -->
+                            <div class="unav-htext">
+                                <a href="#">kids</a> 
+                            </div>
+                            <div class="unav_list-hover ">
+                                <ul class="unav_list-layout">
+                                    <li>
+                                        <div class="unav_list-link"> <!-- Bold the txt -->
+                                            <a  href="">go to the link</a>
+                                        </div>
+                                        <div class="unav_list-link"> <!-- Bold the txt -->
+                                            <a  href="">go to the link</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="unav_list-link"> <!-- Bold the txt -->
+                                            <a  href="">go to the link</a>
+                                        </div>
+                                        <ul class="unav_list-hlist"> <!-- adding a hozon list of link for 1 main -->
+                                            <li class="unav-hlist-link">
+                                                <a href="">go to the link</a>
+                                            </li>
+                                            <!-- add more here unav-hlist-link -->
+                                            <li class="unav-hlist-link">
+                                                <a href="">go to the link</a>
+                                            </li>
+                                            <li class="unav-hlist-link">
+                                                <a href="">go to the link</a>
+                                            </li>
+                                        </ul>
+                                        <div class="unav_list-link"> <!-- Bold the txt -->
+                                            <a  href="">go to the link</a>
+                                        </div>
+                                    </li>
+                                    <!-- add more here unav-li -->
+                                    <li>
+                                        <div class="unav_list-link"> <!-- Bold the txt -->
+                                            <a  href="">go to the link</a>
+                                        </div>
+                                        <ul class="unav_list-hlist"> <!-- adding a hozon list of link for 1 main -->
+                                            <li class="unav-hlist-link">
+                                                <a href="">go to the link</a>
+                                            </li>
+                                            <!-- add more here unav-hlist-link -->
+                                        </ul>
+                                    </li>
+                                    <li> <!-- this for img on the left or ads-> always the last li -->
+                                        <div class="unav_list-sales">
+                                            <!-- adding sale or ads of items -->
+                                            <a href="" class="sales-logo">
+                                                <img src="../public/img/Sales/logo1.jpeg" alt="sale img"/>
+                                            </a>
+                                            <div class="sales-text">
+                                                <a href="">going where the sale img go to</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="unav-li"> <!-- when hover main body have black cover ontop -->
+                            <div class="unav-htext">
+                                <a href="#">sale</a> 
+                            </div>
+                            <div class="unav_list-hover ">
+                                <ul class="unav_list-layout">
+                                    <li>
+                                        <div class="unav_list-link"> <!-- Bold the txt -->
+                                            <a  href="">go to the link</a>
+                                        </div>
+                                        <div class="unav_list-link"> <!-- Bold the txt -->
+                                            <a  href="">go to the link</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="unav_list-link"> <!-- Bold the txt -->
+                                            <a  href="">go to the link</a>
+                                        </div>
+                                        <ul class="unav_list-hlist"> <!-- adding a hozon list of link for 1 main -->
+                                            <li class="unav-hlist-link">
+                                                <a href="">go to the link</a>
+                                            </li>
+                                            <!-- add more here unav-hlist-link -->
+                                            <li class="unav-hlist-link">
+                                                <a href="">go to the link</a>
+                                            </li>
+                                            <li class="unav-hlist-link">
+                                                <a href="">go to the link</a>
+                                            </li>
+                                        </ul>
+                                        <div class="unav_list-link"> <!-- Bold the txt -->
+                                            <a  href="">go to the link</a>
+                                        </div>
+                                    </li>
+                                    <!-- add more here unav-li -->
+                                    <li>
+                                        <div class="unav_list-link"> <!-- Bold the txt -->
+                                            <a  href="">go to the link</a>
+                                        </div>
+                                        <ul class="unav_list-hlist"> <!-- adding a hozon list of link for 1 main -->
+                                            <li class="unav-hlist-link">
+                                                <a href="">go to the link</a>
+                                            </li>
+                                            <!-- add more here unav-hlist-link -->
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
                         <!-- add more here unav-li -->
-                        <li class="unav-item side-menu">
+                        <li class="unav-item side-menu hidden">
                             <div class="menu_content-htext">
                                 <a href="">menu side men</a> <!-- put an arrow in ::after -->
                             </div>
@@ -156,199 +432,261 @@
                 </nav>
             </div>
         </header>
-        <main id="main_content">
-            <div class="main_containter-layout">
-                <div class="slick_list dragable"> <!-- banner auto scroll left-right -->
-                    <section class="slick_list-track">
-                        <!-- add more here  -->
-                        <div class="slick_list-slide">
-                            <div>
-                                <img src="" alt="background slide"/>
+        <div id="body_content">
+            <main id="main_content">
+                <div class="main_containter-layout">
+                    <div class="card_house"> <!-- Big card banner to show case items -->
+                        <section class="card_house-layout">
+                            <div class="card_house-background">
+                                <img src="../public/img/HP_Hero.jpg"/>
+                            </div>
+                            <div class="card_house-container">
+                                <div class="card_house-text">
+                                    <div class="card_house-head">
+                                        <span class="text-company uppertext">company name</span>
+                                        <h2 class="text-head2 capitext">grey means go</h2>
+                                    </div>
+                                    <div class="card_house-body">
+                                        <p class="text1r2">Go green when the skies are grey with the 100% recycled shell of the PreCip® Eco. </p>
+                                    </div>
+                                    <div class="card_house-link">
+                                        <a href="#" class="button">aa</a>
+                                        <a href="#" class="button">bb</a>
+                                        <a href="#" class="button">cc</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="slick_list dragable"> <!-- banner auto scroll left-right -->
+                        <section class="slick_list-track">
+                            <div class="slick_list-head">
+                                <h2 class="text-head2">Shop By Category</h2>
+                            </div>
+                            <div class="slick_list-body">
+                                <!-- add more here  -->
+                                <nav class="slick_list-nav">
+                                    <img src="" alt="background slide"/>
                                     <div class="slick_list-container">  <!-- make the background color maybe 50% on the left or right -->
                                         <div class="slick_list-text"> 
                                             <!-- add more here  -->
                                             <p></p>
                                             <div class="slick_list-link">
                                                 <!-- add more here  -->
-                                                <a></a>
+                                                <a href="#" class="button"></a>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </nav>
                             </div>
-                        </div>
-                    </section>
-                </div>
-                <div class="fluid">
-                    <section class="fluid-layout">
-                        <div class="fluid-head">
-                            <h3 ></h3> <!-- add h3 -->
-                        </div>
-                        <div class="fluid-body">
-                            <nav class="slick_list-track">
-                                <!-- add more here  -->
-                                <div class="slick_list-slide">
-                                    <div class="fluid-container">
-                                        <div class="fluid_title-card">
-                                            <p></p> <!-- add p -->
-                                        </div>
-                                        <div class="fluid_title-body">
-                                            <p></p> <!-- add p -->
+                        </section>
+                    </div>
+                    <div class="fluid">
+                        <section class="fluid-layout">
+                            <div class="fluid-head">
+                                <h3 ></h3> <!-- add h3 -->
+                            </div>
+                            <div class="fluid-body">
+                                <nav class="slick_list-track">
+                                    <!-- add more here  -->
+                                    <div class="slick_list-slide">
+                                        <div class="fluid-container">
+                                            <div class="fluid_title-card">
+                                                <img src="">
+                                            </div>
+                                            <div class="fluid_title-body">
+                                                <p></p> <!-- add p -->
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </nav>
-                        </div>
-                    </section>
-                </div>
-                <!-- add more here  -->
-                <div class="masonry">
-                    <section class="masonry-layout">
-                        <!-- add more here  -->
-                        <div class="masonry_brick">
-                            <img src="" >
-                            <dic class="masonry_brick-body">
-                                <!-- there will be big font txt and smaller one -->
-                                <p></p>
-                                <a href="">asd</a> <!-- add hover effect -->
-                            </dic>    
-                        </div>
-                    </section>
-                </div>
-                <div class="popular">
-                    <section class="popular-layout">
-                        <div class="popular-container">
-                            <div class="popular-img">
-
+                                </nav>
                             </div>
-                            <div class="popular-body">
-                                <!-- there will be big font txt and smaller one -->
-                                <p></p>
-                                <a href="">asd</a> <!-- add hover effect -->
+                        </section>
+                    </div>
+                    <!-- add more here  -->
+                    <div class="masonry">
+                        <section class="masonry-layout">
+                            <div class="masonry_brick">
+                                <img src="" alt="img on the right side">
+                                <dic class="masonry_brick-body">
+                                    <!-- there will be big font txt and smaller one -->
+                                    <img src="">
+                                    <p></p>
+                                    <a href="" class="button">asd</a> <!-- add hover effect -->
+                                </dic>    
                             </div>
-                        </div>
-                    </section>
-                </div>
-                <div class="built_connect">
-                    <section class="built_connect-layout">
-                        <!-- add more here  -->
-                        <div>
-                            <div class="built_connect-container">
-                                <div class="built_connect-head">
-                                    <img>
-                                    <div class="built_connect-text">
-
-                                    </div>
+                        </section>
+                    </div>
+                    <div class="popular">
+                        <section class="popular-layout">
+                            <div class="popular-container">
+                                <div class="popular-img">
+    
                                 </div>
-                                <div class="built_connect-body">
+                                <div class="popular-body">
+                                    <!-- there will be big font txt and smaller one -->
+                                    <img src=""/>
+                                    <p></p>
                                     <a href="">asd</a> <!-- add hover effect -->
                                 </div>
                             </div>
-                        </div>
-                    </section>
-                </div>
-                <div class="recent">
-                    <section class="recent-layout">
-                        <div class="recent-head">
-                            
-                        </div>
-                        <nav class="recent_list">
-                            <ul class="recent_list-sort">
-                                <li class="">
-                                    <a href="">
+                        </section>
+                    </div>
+                    <div class="built_connect">
+                        <section class="built_connect-layout">
+                            <!-- add more here 3 itesm row to show about history, technology, store local -->
+                            <div>
+                                <div class="built_connect-container">
+                                    <div class="built_connect-head">
                                         <img>
-                                        <div class="">
-                                            <h3></h3>
-                                            <!-- add more here  -->
-                                            <span></span> <!-- add hover effect -->
+                                        <div class="built_connect-text">
+    
                                         </div>
-                                    </a> <!-- add hover effect -->
-                                </li>
-                            </ul>
-                        </nav>
-                    </section>
-                </div>
-                <!-- <div class="club">
-                    <section class="club-layout">
-
-                        <div class="club-head">
-
-                        </div>
-                        <nav class="club_list">
-                            <ul class="">
-                                <li class="club_list-body">
-
-                                </li>
-                            </ul>
-                        </nav>
-                    </section>
-                </div> -->
-            </div>
-        </main>
-        <footer id="foot_content">
-            <div class="foot_containter-layout">
-                <div class="container_BackTop">
-                    <span class="BackTop-container">
-                        <a href="#Start">Back to the top</a>
-                    </span>
-                </div>
-                <hr>
-                <div class="container_home">
-                    <form>
-                        <div class="home-email">
-                            <div id="email-signin">
-                                <input >
+                                    </div>
+                                    <div class="built_connect-body">
+                                        <a href="">asd</a> <!-- add hover effect -->
+                                    </div>
+                                </div>
                             </div>
-                            <div class="email-description ">
-                                <p></p>
+                        </section>
+                    </div>
+                    <div class="recent">
+                        <section class="recent-layout">
+                            <div class="recent-head">
+                                <h2></h2>
                             </div>
-                        </div>
-                        <div class="home-social">
-                            <nav class="social_list">
-                                <ul>
-                                    <!-- add more here  -->
-                                    <li class="social-icons"><!-- add hover effect -->
-                                        <a href="">
-                                            <img src="" alt="social-icon"/>
-                                        </a>
+                            <nav class="recent_list">
+                                <ul class="recent_list-sort">
+                                    <li class="recent_list-container">
+                                        <a href="" class="recent_list-link">
+                                            <img>
+                                            <div class="recent_list-text">
+                                                <h3></h3>
+                                                <!-- add more here  -->
+                                                <span></span> <!-- add hover effect -->
+                                            </div>
+                                        </a> <!-- add hover effect -->
+                                    </li>
+                                </ul>
+                            </nav>
+                        </section>
+                    </div>
+                    <div class="club">
+                        <section class="club-layout">
+    
+                            <div class="club-head">
+    
+                            </div>
+                            <div class="club-body">
+                                <nav class="club_list">
+                                    <ul class="club_list-nav">
+                                        <!-- add more here -->
+                                        <li class="club_list-container">
+                                            <div class="club_list-hover">
+                                                <div class="club_list-img">
+                                                    <img src="" alt="recent img to collect">
+                                                </div>
+                                                <div class="club_list-darkbot">
+
+                                                </div>
+                                            </div>
+                                            <div class="club_list-Popup">
+                                                <div class="club_Popup">
+                                                    <div class="club_Popup-close">
+                                                        <span class=""></span>
+                                                    </div>
+                                                    <div class="club_Popup-left">
+                                                        <div class="club_Popup-img">
+                                                            <img src="" alt="" >
+                                                        </div>
+                                                        <div class="club_Popup-media">
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="club_Popup-right">
+                                                        <div class="club_Popup-head">
+
+                                                        </div>
+                                                        <div class="club_Popup-body">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </main>
+            <footer id="foot_content" style="position: relative; height: 140vh; top: auto;">
+                <div class="foot_containter-layout">
+                    <div class="container_BackTop">
+                        <span class="BackTop-container">
+                            <a href="#Start">Back to the top</a>
+                        </span>
+                    </div>
+                    <hr>
+                    <div class="container_home">
+                        <form>
+                            <div class="home-email">
+                                <div id="email-signin">
+                                    <input >
+                                </div>
+                                <div class="email-description ">
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="home-social">
+                                <nav class="social_list">
+                                    <ul>
+                                        <!-- add more here  -->
+                                        <li class="social-icons"><!-- add hover effect -->
+                                            <a href="">
+                                                <img src="" alt="social-icon"/>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="container_info">
+                        <div class="info-layout">
+                            <nav class="info_list">
+                                <ul class="info_list-container">
+                                    <li class="info_hnav">
+                                        <!-- add more here  -->
+                                        <div class="hnav-head">
+                                            <button class="info_hnav-toggole"></button><!-- screen big show h4 || if screen small put an arrow in ::after  -->
+                                            <h4 class=""></h4>
+                                        </div>
+                                        <div class="hnav_list">
+                                            <ul class="hnav_list-sort">
+                                                <!-- add more here  -->
+                                                <li class="hnav_list-link">
+                                                    <a href="">asd</a> <!-- add hover undertext -->
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </li>
                                 </ul>
                             </nav>
                         </div>
-                    </form>
-                </div>
-                <div class="container_info">
-                    <div class="info-layout">
-                        <nav class="info_list">
-                            <ul class="info_list-container">
-                                <li class="info_hnav">
-                                    <!-- add more here  -->
-                                    <div class="hnav-head">
-                                        <button class="info_hnav-toggole"></button><!-- screen big show h4 || if screen small put an arrow in ::after  -->
-                                        <h4 class=""></h4>
-                                    </div>
-                                    <div class="hnav_list">
-                                        <ul class="hnav_list-sort">
-                                            <!-- add more here  -->
-                                            <li class="hnav_list-link">
-                                                <a href="">asd</a> <!-- add hover undertext -->
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                        </nav>
+                    </div>
+                    <div class="container_copyright">
+                        <div class="copyright-logo">
+                            <img src="" alt="company logo"/>
+                        </div>
+                        <div class="copyright-body">
+                            <span>cpoyright text</span>
+                        </div>
                     </div>
                 </div>
-                <div class="container_copyright">
-                    <div class="copyright-logo">
-                        <img src="" alt="company logo"/>
-                    </div>
-                    <div class="copyright-body">
-                        <span>cpoyright text</span>
-                    </div>
-                </div>
-            </div>
-        </footer>
+            </footer>
+        </div>
     </body>
+    <script src="../public/javascript/header.js" type="text/javascript"></script>
 </html>

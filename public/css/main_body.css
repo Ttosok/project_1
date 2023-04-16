@@ -1,0 +1,310 @@
+/* public grobal for all */
+.button{
+    padding: .45rem .785rem;
+    border: 1px solid transparent;
+    margin: 1rem 1.5rem 0 0;
+    text-decoration: none;
+}
+/* company text */
+.text-company{
+    font-size: 1rem;
+}
+.uppertext{
+    text-transform: uppercase;
+}
+.capitext{
+    text-transform: capitalize;
+}
+/* head 2 */
+.text-head2{
+    font-size: 2.5rem;
+    font-family: system-ui;
+    letter-spacing: normal;
+    /* font-weight: 1000; */
+}
+/* font size 20pt */
+.text1r2{
+    font-size: 1.2rem;
+}
+/* big body*/
+#body_content{
+    position: relative;
+    top: 110px;
+    font-family: roboto-regular,sans-serif;
+}
+/* contain for main-body */
+#main_content{
+    position: relative;
+}
+.main_containter-layout{
+    position: relative;
+}
+/* card_house ads */
+.card_house{
+    width: 100%;
+    height: 400px;
+}
+.card_house-layout{
+    padding: 0 .8rem;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+/* img background */
+.card_house-background{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+}
+.card_house-background img{
+    width: 100%;
+    /* object-position: top;
+    object-fit: contain; */
+    position: relative;
+    bottom: 25%;
+}
+/* container for text and link */
+.card_house-container{
+    display: flex;
+    width: 70%;
+    height: 100%;
+    position: relative;
+    /* left: 15%; */
+    flex-flow: column wrap;
+    justify-content: center;
+}
+.card_house-text{
+    position: absolute;
+    width: 50%;
+    line-height: 1.2;
+    /* max-width: 50%; */
+}
+.card_house-head{
+    margin-bottom: 1rem;
+    /* font-size: 2.5rem; */
+}
+.card_house-body{
+    margin-bottom: .25rem;
+}
+.card_house-link{
+    display: flex;
+    flex-flow: row wrap;
+}
+.card_house-link .button{
+    background-color: black;
+    color: white;
+    line-height: 2.1;
+}
+/* 1st row */
+.slick_list.dragable{
+    position: relative;
+}
+.slick_list-track{
+    padding: 0 .5rem 1.5rem;
+    background-color: #EAEAEA;
+    width: 100%;
+}
+.slick_list-head{
+    width: 100%;
+    padding: 0 .5rem;
+}
+.slick_list-head > .text-head2{
+    padding: .5rem 0 1.5rem;
+    font-size: 1.875rem;
+    text-align: center;
+}
+
+/* list slides of ads */
+.slick_list-body{
+    padding: 0 .5rem;
+    position: relative;
+    max-width: 67.5rem;
+    margin: auto;
+    display: flex;
+}
+.slick_list-nav{
+    display: flex;
+
+}
+.slick_list-container{
+    
+}
+.slick_list-text{
+
+}
+.slick_list-link{
+
+}
+/* 2nd row */
+.fluid{
+
+}
+.fluid-layout{
+
+}
+/* fuild head */
+.fluid-head{
+
+}
+/* fuild body */
+.fluid-body{
+
+}
+.slick_list-track{
+
+}
+/* slick lists can be move with arrow if in smaller width */
+.slick_list-slide{
+    
+}
+.fluid-container{
+
+}
+/* slick list img */
+.fluid_title-card{
+
+}
+/* slick list text */
+.fluid_title-body{
+
+}
+/* 3rd row  masonry */
+.masonry{
+
+}
+.masonry-layout{
+
+}
+/* 1 big width */
+.masonry_brick{
+
+}
+/* masonry text and body with it own img */
+.masonry_brick-body{
+
+}
+/* 4th row popular */
+.popular{
+
+}
+.popular-layout{
+
+}
+.popular-container{
+
+}
+/* popular to hold img */
+.popular-img{
+
+}
+/* popular body for text and link */
+.popular-body{
+
+}
+/* 5th row built_connect */
+.built_connect{
+
+}
+.built_connect-layout{
+
+}
+/* container for local infomation */
+.built_connect-container{
+
+}
+.built_connect-head{
+
+}
+.built_connect-text{
+
+}
+.built_connect-body{
+
+}
+/* 6th row recent */
+.recent{
+
+}
+.recent-layout{
+
+}
+.recent-head{
+
+}
+/* recent_list to show main info about it */
+.recent_list{
+
+}
+.recent_list-sort{
+
+}
+/* last row */
+.club{
+
+}
+.club-layout{
+
+}
+.club-head{
+
+}
+.club-body{
+
+}
+/* list showing the club */
+.club_list{
+
+}
+.club_list-nav{
+
+}
+/* club_list items each */
+.club_list-container{
+
+}
+/* hover effect */
+.club_list-hover{
+
+}
+.club_list-img{
+
+}
+.club_list-darkbot{
+
+}
+/* club list popup */
+.club_list-Popup{
+
+}
+.club_Popup{
+
+}
+/* close button */
+.club_Popup-close{
+
+}
+/* club popup left */
+.club_Popup-left{
+
+}
+.club_Popup-img{
+    
+}
+.club_Popup-media{
+
+}
+/* club popup right */
+.club_Popup-right{
+
+}
+.club_Popup-head{
+
+}
+.club_Popup-body{
+
+}
