@@ -66,12 +66,11 @@
 /* card_house ads */
 .card_house{
     width: 100%;
-    height: 400px;
 }
 .card_house-layout{
-    padding: 0 .8rem;
     width: 100%;
     height: 100%;
+    min-height: 20rem;
     position: relative;
     display: flex;
     flex-flow: row wrap;
@@ -83,21 +82,21 @@
     height: 100%;
     overflow: hidden;
     position: absolute;
+    left: 0;
 }
 .card_house-background img{
     width: 100%;
-    /* height: 100%; */
     object-fit: none;
     position: relative;
-    bottom: 5%;
+    bottom: 20%;
 }
 /* container for text and link */
 .card_house-container{
     display: flex;
-    width: 70%;
+    width: 100%;
     height: 100%;
+    padding: 0 2rem;
     position: relative;
-    /* left: 15%; */
     flex-flow: column wrap;
     justify-content: center;
 }
@@ -122,6 +121,7 @@
     background-color: black;
     color: white;
     line-height: 2.1;
+    text-align: center;
 }
 /* 1st row */
 .slick_list.dragable{
@@ -141,27 +141,93 @@
     font-size: 1.875rem;
     text-align: center;
 }
-
 /* list slides of ads */
 .slick_list-body{
-    /* max-width: 67.5rem; min 12000px*/
-    /* max 90% min 992 margin left-right 5%*/
     padding: 0 .5rem;
     position: relative;
     max-width: 90rem;
     margin: auto;
 }
-.slick_list-nav{
+/* slick_ corssroll for the 2 arrow on both side */
+.slick_list-crossroll{
+    width: 99.7%;
+    top: 45%;
+    left: 1px;
+    position: absolute;
+    background: transparent;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+/* slick_ corssroll on the left */
+.slick_list-crossroll_before{
+    /* transform: rotateZ(90deg); */
+    display: flex;
+    align-items: center;
+    width: 37.5px;
+    height: 37.5px;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 2rem;
+    z-index: 2;
+}
+.slick_list-crossroll_before > .LeftArrow{
+    left: 35%;
+    position: relative;
+}
+/* .slick_list-crossroll_before > img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: 2.5px -1px;
+} */
+.slick_list-crossroll_before:hover{
+    outline: 1px solid #000;
+    opacity: .7;
+}
+/* slick_ corssroll on the right */
+.slick_list-crossroll_after{
+    /* transform: rotateZ(-90deg); */
+    display: flex;
+    align-items: center;
+    width: 37.5px;
+    height: 37.5px;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 2rem;
+    z-index: 2;
+}
+.slick_list-crossroll_after > .RightArrow{
+    left: 20%;
+    position: relative;
+}
+/* .slick_list-crossroll_after > img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: 2.5px -1px;
+} */
+.slick_list-crossroll_after:hover{
+    outline: 1px solid #000;
+    opacity: .7;
+}
+.slick_list-container{
+    width: 100%;
+    overflow: hidden;
+}
+.slick_list-nav{    /* transform: translateX(-100px); */
     display: flex;
     list-style: none;
     flex-direction: row;
-    /* flex-grow: 2; */
 }
 .slick_list-li{
     padding: 0 12px;
     display: flex;
     flex-direction: column;
-    /* max-width: 20%; */
+    min-width: 20%;
     flex-basis: auto;
     line-height: 1.2;
 }
@@ -210,8 +276,6 @@
     margin-top: 2.5rem;
 }
 .fluid-layout{
-    /* max-width: 67.5rem; min 12000px*/
-    /* max 90% min 992 margin left-right 5%*/
     padding: 0 .5rem;
     position: relative;
     max-width: 90rem;
@@ -225,6 +289,7 @@
 /* fuild li */
 .fluid-slide{
     flex-basis: 50%;
+    max-width: 50%;
     padding: 0 .5rem;
     margin-bottom: .75rem;
 }
@@ -269,12 +334,12 @@
     color: #000;
 }
 .fluid_title-link > a{
-    border-color: #000;
+    border-color: #0C0C0C;
     color: #491040;
     transition: all ease-in-out .25s;
 }
 .fluid_title-link > a:hover{
-    background-color: #000;
+    background-color: #0C0C0C;
     color: #EAEAEA;
 }
 .fluid_title-link > a:first-child{
@@ -287,47 +352,60 @@
 .masonry{
     position: relative;
     margin-top: 2.5rem;
+    width: 100%;
 }
 .masonry-layout{
-    display: flex;
+    width: 100%;
+    height: auto;
 }
 /* 1 big width */
 .masonry_brick{
     display: flex;
     flex-flow: row nowrap;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
-/* left */
+/* masonry_brick left */
 .masonry_brick-left{
     order: 1;
-    height: 100%;
     flex-basis: 25%;
     max-width: 25%;
+    display: flex;
     position: relative;
+    min-height: 20rem;
 }
+/* masonry_brick left img overlay background */
 .masonry_brick-overlay{
     position: absolute;
-    z-index: -2;
-    min-height: 100%;
     width: 100%;
+    height: 100%;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-end;
-    background-color: #000;
-    padding: 2% 12%;
+    align-items: center;
 }
-.masonry_brick-overlay > img{
-    max-width: 100%;
+.masonry_brick-img{
     height: 50%;
+    width: 100%;
     position: relative;
     object-fit: contain;
 }
-.masonry_brick-container{
-    display: flex;
-    justify-content: center;
+/* .testing{
     position: relative;
-    height: 100%;
     width: 100%;
+    height: 100%;
+    background-image: url("../img/Lookbook_HP.png");
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+} */
+.masonry_brick-container{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    background-color: #0C0C0C;
+    padding: 2% 12%;
 }
 /* masonry text and link */
 .masonry_brick-body{
@@ -362,13 +440,17 @@
     color: white;
     background-color: #000;
 }
+/* masonry_brick right */
 .masonry_brick-right{
     order: 2;
     flex-basis: 75%;
     max-width: 75%;
+    min-height: 20rem;
 }
-.masonry_brick-right > img{
+.masonry_brick-right img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 /* 4th row popular */
 /* .popular{
@@ -531,6 +613,7 @@
 .recent_list-text{
     width: 100%;
     padding: 0 1rem;
+    margin-bottom: 1rem;
     text-overflow: ellipsis;
     overflow: hidden;
 }
@@ -589,6 +672,7 @@
 .club-body{
     position: relative;
     width: 100%;
+    margin-bottom: 1.5rem;
 }
 /* list showing the club */
 .club_list{
@@ -597,18 +681,9 @@
     align-items: stretch;
     width: 100%;
 }
-.club_list-nav{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: stretch;
-    list-style: none;
-    max-width: 100%;
-    position: relative;
-}
+/* club corssroll for the 2 arrow on both side */
 .club_list-crossroll{
     width: 100%;
-    /* height: 100%; */
     top: 45%;
     position: absolute;
     background: transparent;
@@ -617,8 +692,9 @@
     justify-content: space-between;
     align-items: center;
 }
+/* club corssroll on the left */
 .club_list-crossroll_before{
-    transform: rotateZ(90deg);
+    /* transform: rotateZ(90deg); */
     display: flex;
     align-items: center;
     width: 37.5px;
@@ -629,18 +705,23 @@
     font-size: 2rem;
     z-index: 2;
 }
-.club_list-crossroll_before > img{
+/* .club_list-crossroll_before > img{
     width: 100%;
     height: 100%;
     object-fit: contain;
     object-position: 2.5px -1px;
+} */
+.club_list-crossroll_before > .LeftArrow{
+    left: 35%;
+    position: relative;
 }
 .club_list-crossroll_before:hover{
     outline: 1px solid #000;
     opacity: .7;
 }
+/* club corssroll on the right */
 .club_list-crossroll_after{
-    transform: rotateZ(-90deg);
+    /* transform: rotateZ(-90deg); */
     display: flex;
     align-items: center;
     width: 37.5px;
@@ -651,20 +732,40 @@
     font-size: 2rem;
     z-index: 2;
 }
-.club_list-crossroll_after > img{
+/* .club_list-crossroll_after > img{
     width: 100%;
     height: 100%;
     object-fit: contain;
     object-position: 2.5px -1px;
+} */
+.club_list-crossroll_after > .RightArrow{
+    left: 20%;
+    position: relative;
 }
 .club_list-crossroll_after:hover{
     outline: 1px solid #000;
     opacity: .7;
 }
-/* club_list items each */
+/* club list container */
 .club_list-container{
     width: 100%;
+    overflow: hidden;
+}
+.club_list-nav{ /* transform: translateX(-100px); */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+    list-style: none;
+    max-width: 100%;
+    position: relative;
+}
+/* club_list items each */ 
+.club_list-li{   
+    width: 100%;
     flex-basis: 25%;
+    min-width: 25%;
+    max-width: 25%;
     height: 280px;
     margin: 0 .1rem;
 }
@@ -676,12 +777,16 @@
     height: 100%;
     position: relative;
     cursor: pointer;
+    overflow: hidden;
 }
+/* cub img contain */
 .club_list-img{
+    height: 19rem;
     width: 100%;
     position: relative;
     overflow: hidden;
 }
+/* club-img hover to show an weak background dark */
 .club_list-hover:hover .club_list-img::before{
     content: "";
     background-color: rgb(0, 0, 0);
@@ -692,19 +797,29 @@
 }
 .club_list-img > img{
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center -50px;
 }
-.club_list-hover:hover .club_list-darkbot{
-    display: flex;
-}
+/* club-darkbot show short media */
 .club_list-darkbot{
+    position: absolute;
     padding: 0 .5rem;
-    display: none;
+    width: 100%;
+    bottom: -30px;
+    display: flex;
     flex-flow: row nowrap;
     list-style: none;
     background-color: #000;
     align-items: center;
+    opacity: 0;
+    transition-duration: .3s , .5s;
+    transition-delay: 0s , .05s;
+    transition-property: transform, opacity;
+}
+/* club-darkbot hover to show the short link into different media */
+.club_list-hover:hover .club_list-darkbot{
+    transform: translateY(-30px);
+    opacity: 1;
 }
 .darkbot-icon{
     color: white;
@@ -743,6 +858,7 @@
     background-color: white;
 }
 /* clip: rect(0px,64px,64px,0px); */
+/* club corssroll for the 2 arrow on both side */
 .club_Popup-crossroll{
     position: absolute;
     left: -5%;
@@ -757,6 +873,7 @@
     align-items: center;
     opacity: .7;
 }
+/* club corssroll on the left */
 .club_Popup-crossroll_before{
     transform: rotateZ(90deg);
     display: flex;
@@ -778,6 +895,7 @@
     outline: 1px solid #000;
     opacity: .7;
 }
+/* club corssroll on the right */
 .club_Popup-crossroll_after{
     transform: rotateZ(-90deg);
     display: flex;
@@ -812,6 +930,7 @@
     flex-basis: 50%;
     height: 500px;
 }
+/* club popup left img*/
 .club_Popup-img{
     width: 100%;
     max-height: 88%;
@@ -823,6 +942,7 @@
     object-position: -50%;
     /* height: 100%; */
 }
+/* club popup left media contain */
 .club_Popup-media{
     width: 100%;
     height: 100%;
@@ -833,6 +953,7 @@
     line-height: 3.625rem;
     align-items: center;
 }
+/* club popup left media link */
 .club_Popup-meta_container{
     display: flex;
     flex-flow: row nowrap;
@@ -887,6 +1008,7 @@
     scroll-behavior: smooth;
     overflow-y: visible;
 }
+/* club popup right  head*/
 .club_Popup-head{
     margin-bottom: 1.25rem;
     display: flex;
@@ -899,17 +1021,20 @@
     font-size: 1.3rem;
     font-weight: 500;
 }
+/* club popup right body*/
 .club_Popup-body{
     max-height: 80%;
     scroll-behavior: smooth;
     overflow-block: hidden;
     overflow-y: scroll;
 }
+/* club popup right  text*/
 .club_Popup-txt{
     width: 100%;
     font-size: 1rem;
     padding-bottom: .75rem;
 }
+/* club popup right list of imtes*/
 .club_Popup-items{
     padding: .75rem 0 .75rem;
     display: flex;
@@ -920,6 +1045,7 @@
     font-weight: 400;
     margin-bottom: .375rem;
 }
+/* club popup right shop item contain*/
 .items_container{
     margin-right: .75rem;
     width: 100%;
@@ -930,6 +1056,7 @@
 .items_container > li{
     flex-basis: 25%;
 }
+/* club popup right shop item link*/
 .club_Popup-item{
     text-decoration: none;
     display: flex;
@@ -944,6 +1071,7 @@
 .club_Popup-item-img > img{
     width: 100%;
 }
+/* club_Popup-item hover to show an shop bag of item */
 .club_Popup-item:hover > .club_Popup-item-img::before{
     opacity: 0.45;
     display: flex;
@@ -956,4 +1084,282 @@
     position: absolute;
     width: 100%;
     height: 100%;
+}
+/* testing new img holder in club */
+.club_list-img_cover{
+    width: calc(100% - 4px);
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 25%;
+    /* background-position: center; */
+}
+@media (min-width: 320px) {
+    .button{
+        margin: 1rem 0;
+    }
+    .card_house-layout{
+        flex-flow: column wrap;
+        min-height: 40rem;
+    }
+    .card_house-background{
+        position: relative;
+        flex-grow: 1;
+        display: flex;
+    }
+    .card_house-background img{
+        bottom: 0;
+        height: auto;
+        object-position: -250px;
+        object-fit: cover;
+    }
+    .card_house-container{
+        padding: 1rem;
+    }
+    .card_house-text{
+        position: relative;
+        width: 100%;
+    }
+    .card_house-link{
+        flex-flow: column nowrap;
+    }
+    .card_house-link .button{
+        line-height: 1.5;
+    }
+    /* .slick_list-body,.fluid,.built_connect-layout,.recent-layout,.club-layout{
+        max-width: 94%;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    .club_list-img > img{
+        object-position: center;
+        height: 100%;
+    } */
+    .slick_list-crossroll{
+        display: flex;
+    }
+    .slick_list-li{
+        min-width: 50%;
+    }
+    /*  */
+    .slick_list-nav{
+        transform: translateX(-100px);
+    }
+    /*  */
+    .fluid-track{
+        flex-flow: column nowrap;
+    }
+    .fluid-slide{
+        max-width: 80%;
+    }
+    .masonry_brick{
+        flex-flow: column wrap;
+    }
+    .masonry_brick-left,.masonry_brick-right{
+        max-width: 100%;
+        width: 100%;
+        flex-basis: 100%;
+    }
+    .masonry_brick-left img{
+        height: auto;
+    }
+    .masonry_brick{
+        flex-flow: column wrap;
+    }
+    .masonry_brick-left,.masonry_brick-right{
+        max-width: 100%;
+        width: 100%;
+        flex-basis: 100%;
+    }
+    .masonry_brick-left img{
+        height: auto;
+    }
+    .built_connect-layout{
+        flex-flow: column nowrap;
+    }
+    .built_connect-container{
+        max-width: 80%;
+        align-self: center;
+    }
+    .masonry_brick-right{
+        display: flex;
+    }
+    .recent_list-sort{
+        flex-flow: column nowrap;
+        max-height: 100%;
+    }
+    .recent_list-link{
+        flex-direction: row-reverse;
+        padding: .5rem;
+    }
+    .recent_list-link > img{
+        max-width: 5rem;
+        align-self: center;
+    }
+    .club_list-li{
+        min-width: 50%;
+        max-width: 50%;
+    }
+    .club_list-img{
+        display: flex;
+    }
+    .club_list-img > img{
+        object-position: center;
+    }
+    .slick_list-body,.fluid-layout,.built_connect-layout,.recent-layout,.club-layout{
+        max-width: 94%;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+}
+@media (min-width: 596px) {
+    .button{
+        margin: 1rem 1.5rem 0 0;
+    }
+    .card_house-layout{
+        flex-flow: column nowrap;
+        min-height: 40rem;
+    }
+    .card_house-background{
+        position: absolute;
+        flex-grow: 0;
+        display: block;
+    }
+    .card_house-background img{
+        bottom: 0;
+        height: 100%;
+        object-position: 50% 50%;
+        object-fit: cover;
+    }
+    .card_house-container{
+        padding: 0 2rem;
+    }
+    .card_house-link{
+        flex-flow: row nowrap;
+    }
+    .card_house-link .button{
+        line-height: 2.1;
+    }
+    .slick_list-li{
+        min-width: 40%;
+    }
+    .fluid-slide{
+        max-width: 60%;
+    }
+    .built_connect-container{
+        max-width: 60%;
+    }
+    .masonry_brick-right{
+        display: flex;
+    }.club_list-li{
+        min-width: 35%;
+        max-width: 35%;
+    }
+    .club_list-img > img{
+        object-position: center;
+    }
+    .slick_list-body,.fluid-layout,.built_connect-layout,.recent-layout,.club-layout{
+        max-width: 94%;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+}
+@media (min-width: 982px) {
+    .slick_list-crossroll{
+        display: none;
+    }
+    .slick_list-li{
+        min-width: 20%;
+    }
+    /*  */
+    .slick_list-nav{
+        transform: translateX(0px);
+    }
+    /*  */
+    .fluid-track{
+        flex-flow: row nowrap;
+    }
+    .fluid-slide{
+        max-width: 50%;
+    }
+    .masonry_brick{
+        flex-flow: row nowrap;
+    }
+    .masonry_brick-left{
+        min-height: 20rem;
+        max-width: 25%;
+        flex-basis: 25%;
+    }
+    .masonry_brick-left img{
+        height: 50%;
+    }
+    .masonry_brick-right{
+        max-width: 75%;
+        min-height: 20rem;
+        flex-basis: 75%;
+    }
+    .built_connect-layout{
+        flex-flow: row nowrap;
+    }
+    .built_connect-container{
+        max-width: 100%;
+        align-self: center;
+    }
+    .masonry_brick-right{
+        display: block;
+    }
+    .recent_list-sort{
+        flex-flow: row nowrap;
+        max-height: 424px;
+    }
+    .recent_list-link{
+        flex-direction: column;
+        padding: 0;
+    }
+    .recent_list-link > img{
+        max-width: 100%;
+    }
+    .club_list-li{
+        min-width: 25%;
+        max-width: 25%;
+    }
+    .club_list-img{
+        display: block;
+    }
+    .slick_list-body,.fluid-layout,.built_connect-layout,.recent-layout,.club-layout{
+        max-width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+@media (min-width: 1200px) {
+    .card_house-layout{
+        min-height: 20rem;
+        flex-flow: row wrap;
+        align-content: center;
+    }
+    .card_house-background img{
+        bottom: 20%;
+        height: auto;
+        width: 100%;
+    }
+    .club_list-img > img{
+        object-position: center;
+        height: 100%;
+        object-position: center -50px;
+    }
+    .slick_list-body,.fluid-layout,.built_connect-layout,.recent-layout,.club-layout{
+        max-width: 67.5rem;
+        margin: auto;
+    }
+}
+@media (min-width: 1600px) {
+    .club_list-img > img{
+        object-position: center -50px;
+        width: 100%;
+        height: auto;
+    }
+    .slick_list-body,.fluid-layout,.built_connect-layout,.recent-layout,.club-layout{
+        max-width: 90rem;
+        margin: auto;
+    }
 }

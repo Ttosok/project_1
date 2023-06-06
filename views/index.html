@@ -8,6 +8,7 @@
         <!-- <script src="/socket.io/socket.io.js"></script> -->
         <link rel="stylesheet" href="../public/css/header.css" type="text/css">
         <link rel="stylesheet" href="../public/css/main_body.css" type="text/css">
+        <link rel="stylesheet" href="../public/css/footer.css" type="text/css">
         <title>P.HA</title>
     </head>
     <body>
@@ -97,6 +98,7 @@
                                     <div class="account-logo">
                                         <img src="../public/img/user_icon.svg">
                                     </div>
+                                    <p class="account-Shtext">Sign in</p>
                                     <div class="account-text txt_forcus">
                                         <span>
                                             Wellcome
@@ -124,7 +126,7 @@
                     </div>
                 </div>
             </div>
-            <div class="head_containter-sort menu-toggole"> <!-- big -> menu show in row | smaller menu hidden made slide sideway menu(take whole body can't scroll)  -->
+            <div class=" menu-toggole side-menu"> <!-- big -> menu show in row | smaller menu hidden made slide sideway menu(take whole body can't scroll)  -->
                 <nav class="containter_unav"> <!-- scroll menu stay hidden -->
                     <ul class="unav_ul"> <!-- row wrap -->
                         <li class="unav-li"> <!-- when hover main body have black cover ontop -->
@@ -405,26 +407,120 @@
                                 </ul>
                             </div>
                         </li>
-                        <!-- add more here unav-li -->
-                        <li class="unav-item side-menu hidden">
+                        <!-- add more here unav-li -->  
+                        <!-- testing version -->
+                        <!-- <li class="unav-item hidden">
                             <div class="menu_content-htext">
-                                <a href="">menu side men</a> <!-- put an arrow in ::after -->
+                                <a href="" class="capitext">menu side men</a> 
+                                <span id="test_border-rightArr" class="test_border"></span>
                             </div>
                             <div class="menu_content-side">
                                 <ul class="menu_content-layout">
                                     <li class="menu_content-link">
                                         <a href="">go to the link</a>
                                     </li>
-                                    <!-- add more here menu_content-link -->
-                                    <li class="menu_content-dropout">
-                                        <a href="">drop more link to choice</a> <!-- link || if (have more list) put an arrow in ::after -->
-                                        <ul class="dropout-hlist"> <!-- drop hozonway to show more stuff -->
+                                    <li class="menu_content-dropout side-menu">
+                                        <div class="menu_content-htext">
+                                            <a href="">drop more link to choice</a> 
+                                            <span id="test_border-rightArr" class="test_border"></span>
+                                        </div>
+                                        <ul class="dropout-hlist"> 
                                             <li class="dropout-hlist-link">
                                                 <a href="">go to the link</a>
                                             </li>
-                                            <!-- add more here dropout-hlist-link-->
                                         </ul>
                                     </li>
+                                </ul>
+                            </div>
+                        </li> -->
+                        <!-- testing version -->
+                        <li class="unav-item hidden">
+                            <div class="menu_content-button">
+                                <button class="capitext">Hp <span class="DownArrow"></span></button> <!-- || ? maybe try other type ? -->
+                            </div>
+                            <div class="menu_content-dropdown">
+                                <div class="menu_content-ul"> <!-- could also be <ul> -->
+                                    <div class="menu_content-button" > <!-- could also be <li> -->
+                                        <button class="capitext">Mp <span  class="UpArrow"></span></button>
+                                    </div>
+                                    <div class="hnav_list-dropdown">
+                                        <div class="hnav_list-ul"> <!-- could also be <ul> -->
+                                            <div class="hnav_list-li"> <!-- could also be <li> -->
+                                                <div class="hnav_list-link">
+                                                    <a href="#a">aa ?</a>
+                                                </div>
+                                            </div>
+                                            <div class="hnav_list-li"> <!-- could also be <li> -->
+                                                <div class="hnav_list-link">
+                                                    <a href="#a">aa ?</a>
+                                                </div>
+                                            </div>
+                                            <div class="hnav_list-li"> <!-- could also be <li> -->
+                                                <div class="hnav_list-link">
+                                                    <a href="#a">aa ?</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="menu_content-link"> <!-- could also be <li> -->
+                                        <a href="#a">1st aa</a>
+                                    </div>
+                                    <div class="menu_content-link"> <!-- could also be <li> -->
+                                        <a href="#a">1st aa</a>
+                                    </div>
+                                    <div class="menu_content-link"> <!-- could also be <li> -->
+                                        <a href="#a">1st aa</a>
+                                    </div>
+                                </div>
+                                <div class="menu_content-sale"> <!-- contain img -->
+                                    <div class="menu_content-sale_img">
+                                        <a href="a">
+                                            <img src="../public/img/Sales/Marmot_arrivel.jpeg">
+                                        </a>
+                                    </div>
+                                    <div class="menu_content-sale_link">
+                                        <a href="a" class="capitext">link into this img sale</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="unav-item hidden">
+                            <div class="menu_content-head">
+                                <div class="menu_content-link capitext">
+                                    <a href="#a">parent aa</a>
+                                </div>
+                            </div>
+                            <div class="menu_content-body">
+                                <ul class="hnav_list-ul">
+                                    <div class="hnav_list-li">
+                                        <div class="menu_content-link capitext">
+                                            <a href="#a">child aa</a>
+                                        </div>
+                                    <div class="hnav_list-li">
+                                        <div class="menu_content-link">
+                                            <a href="#a">child aa</a>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="unav-item hidden">
+                            <div class="menu_content-head">
+                                <div class="menu_content-link capitext">
+                                    <a href="#a">parent aa</a>
+                                </div>
+                            </div>
+                            <div class="menu_content-body">
+                                <ul class="hnav_list-ul">
+                                    <div class="hnav_list-li">
+                                        <div class="menu_content-link capitext">
+                                            <a href="#a">child aa</a>
+                                        </div>
+                                    <div class="hnav_list-li">
+                                        <div class="menu_content-link">
+                                            <a href="#a">child aa</a>
+                                        </div>
+                                    </div>
                                 </ul>
                             </div>
                         </li>
@@ -438,7 +534,7 @@
                     <div class="card_house"> <!-- Big card banner to show case items -->
                         <section class="card_house-layout">
                             <div class="card_house-background">
-                                <img src="../public/img/HP_Hero.jpg"/>
+                                <img src="../public/img/HP_Hero.jpg">
                             </div>
                             <div class="card_house-container">
                                 <div class="card_house-text">
@@ -464,75 +560,87 @@
                                 <h2 class="text-head2">Shop By Category</h2>
                             </div>
                             <div class="slick_list-body">
-                                <ul class="slick_list-nav">
-                                    <li class="slick_list-li">
-                                        <div class="slick_list-img">
-                                            <img src="../public/img/tile_rainwear.png" alt="background slide"/>
-                                        </div>
-                                        <div class="slick_list-text">
-                                            <p class="bont15 capitext">aaaaaaaaaaa</p>
-                                        </div>
-                                        <a href="#" class="slick_list-link capitext">link text to thing <img src="../public/img/arrow_down.svg" class="arrow_svg_sideway"/></a>
+                                <div class="slick_list-crossroll">
+                                    <div class="slick_list-crossroll_before">
+                                        <!-- <img src="../public/img/arrow_down.svg" alt="v"/> -->
+                                        <span class="LeftArrow"></span>
+                                    </div>
+                                    <div class="slick_list-crossroll_after">
+                                        <!-- <img src="../public/img/arrow_down.svg" alt="v"/> -->
+                                        <span class="RightArrow"></span>
+                                    </div>
+                                </div>
+                                <div class="slick_list-container">
+                                    <ul class="slick_list-nav">
+                                        <li class="slick_list-li">
+                                            <div class="slick_list-img">
+                                                <img src="../public/img/items/tile_rainwear.png" alt="background slide"/>
+                                            </div>
+                                            <div class="slick_list-text">
+                                                <p class="bont15 capitext">aaaaaaaaaaa</p>
+                                            </div>
+                                            <a href="#" class="slick_list-link capitext">link text to thing <img src="../public/img/arrow_down.svg" class="arrow_svg_sideway"/></a>
+                                            <!-- add more here  -->
+                                            <a href="#" class="slick_list-link capitext">link text to thing <img src="../public/img/arrow_down.svg" class="arrow_svg_sideway"/></a>
+                                        </li>
                                         <!-- add more here  -->
-                                        <a href="#" class="slick_list-link capitext">link text to thing <img src="../public/img/arrow_down.svg" class="arrow_svg_sideway"/></a>
-                                    </li>
-                                    <!-- add more here  -->
-                                    <li class="slick_list-li">
-                                        <div class="slick_list-img">
-                                            <img src="../public/img/tile_sleeping_bags.png" alt="background slide"/>
-                                        </div>
-                                        <div class="slick_list-text">
-                                            <p class="bont15 capitext">bbbbbbbbbb</p>
-                                        </div>
-                                        <a href="#" class="slick_list-link capitext">link text to thing <img src="../public/img/arrow_down.svg" class="arrow_svg_sideway"/></a>
-                                        <!-- add more here  -->
-                                        <a href="#" class="slick_list-link capitext">link text to thing <img src="../public/img/arrow_down.svg" class="arrow_svg_sideway"/></a>
-                                    </li>
-                                    <li class="slick_list-li">
-                                        <div class="slick_list-img">
-                                            <img src="../public/img/duo_tile_tents.png" alt="background slide"/>
-                                        </div>
-                                        <div class="slick_list-text">
-                                            <p class="bont15 capitext">cccccccccccc</p>
-                                        </div>
-                                        <a href="#" class="slick_list-link capitext">link text to thing <img src="../public/img/arrow_down.svg" class="arrow_svg_sideway"/></a>
-                                        <!-- add more here  -->
-                                        <a href="#" class="slick_list-link capitext">link text to thing <img src="../public/img/arrow_down.svg" class="arrow_svg_sideway"/></a>
-                                    </li>
-                                    <li class="slick_list-li">
-                                        <div class="slick_list-img">
-                                            <img src="../public/img/tile_sleeping_bags.png" alt="background slide"/>
-                                        </div>
-                                        <div class="slick_list-text">
-                                            <p class="bont15 capitext">dddddddddd</p>
-                                        </div>
-                                        <a href="#" class="slick_list-link capitext">link text to thing <img src="../public/img/arrow_down.svg" class="arrow_svg_sideway"/></a>
-                                        <!-- add more here  -->
-                                        <a href="#" class="slick_list-link capitext">link text to thing <img src="../public/img/arrow_down.svg" class="arrow_svg_sideway"/></a>
-                                    </li>
-                                    <li class="slick_list-li">
-                                        <div class="slick_list-img">
-                                            <img src="../public/img/tile_rainwear.png" alt="background slide"/>
-                                        </div>
-                                        <div class="slick_list-text">
-                                            <p class="bont15 capitext">eeeeeeeeee</p>
-                                        </div>
-                                        <a href="#" class="slick_list-link capitext">link text to thing <img src="../public/img/arrow_down.svg" class="arrow_svg_sideway"/></a>
-                                        <!-- add more here  -->
-                                        <a href="#" class="slick_list-link capitext">link text to thing <img src="../public/img/arrow_down.svg" class="arrow_svg_sideway"/></a>
-                                    </li>
-                                    <li class="slick_list-li">
-                                        <div class="slick_list-img">
-                                            <img src="../public/img/duo_tile_tents.png" alt="background slide"/>
-                                        </div>
-                                        <div class="slick_list-text">
-                                            <p class="bont15 capitext">ffffffffff</p>
-                                        </div>
-                                        <a href="#" class="slick_list-link capitext">link text to thing <img src="../public/img/arrow_down.svg" class="arrow_svg_sideway"/></a>
-                                        <!-- add more here  -->
-                                        <a href="#" class="slick_list-link capitext">link text to thing <img src="../public/img/arrow_down.svg" class="arrow_svg_sideway"/></a>
-                                    </li>
-                                </ul>
+                                        <li class="slick_list-li">
+                                            <div class="slick_list-img">
+                                                <img src="../public/img/items/tile_sleeping_bags.png" alt="background slide"/>
+                                            </div>
+                                            <div class="slick_list-text">
+                                                <p class="bont15 capitext">bbbbbbbbbb</p>
+                                            </div>
+                                            <a href="#" class="slick_list-link capitext">link text to thing <img src="../public/img/arrow_down.svg" class="arrow_svg_sideway"/></a>
+                                            <!-- add more here  -->
+                                            <a href="#" class="slick_list-link capitext">link text to thing <img src="../public/img/arrow_down.svg" class="arrow_svg_sideway"/></a>
+                                        </li>
+                                        <li class="slick_list-li">
+                                            <div class="slick_list-img">
+                                                <img src="../public/img/items/duo_tile_tents.png" alt="background slide"/>
+                                            </div>
+                                            <div class="slick_list-text">
+                                                <p class="bont15 capitext">cccccccccccc</p>
+                                            </div>
+                                            <a href="#" class="slick_list-link capitext">link text to thing <img src="../public/img/arrow_down.svg" class="arrow_svg_sideway"/></a>
+                                            <!-- add more here  -->
+                                            <a href="#" class="slick_list-link capitext">link text to thing <img src="../public/img/arrow_down.svg" class="arrow_svg_sideway"/></a>
+                                        </li>
+                                        <li class="slick_list-li">
+                                            <div class="slick_list-img">
+                                                <img src="../public/img/items/tile_sleeping_bags.png" alt="background slide"/>
+                                            </div>
+                                            <div class="slick_list-text">
+                                                <p class="bont15 capitext">dddddddddd</p>
+                                            </div>
+                                            <a href="#" class="slick_list-link capitext">link text to thing <img src="../public/img/arrow_down.svg" class="arrow_svg_sideway"/></a>
+                                            <!-- add more here  -->
+                                            <a href="#" class="slick_list-link capitext">link text to thing <img src="../public/img/arrow_down.svg" class="arrow_svg_sideway"/></a>
+                                        </li>
+                                        <li class="slick_list-li">
+                                            <div class="slick_list-img">
+                                                <img src="../public/img/items/tile_rainwear.png" alt="background slide"/>
+                                            </div>
+                                            <div class="slick_list-text">
+                                                <p class="bont15 capitext">eeeeeeeeee</p>
+                                            </div>
+                                            <a href="#" class="slick_list-link capitext">link text to thing <img src="../public/img/arrow_down.svg" class="arrow_svg_sideway"/></a>
+                                            <!-- add more here  -->
+                                            <a href="#" class="slick_list-link capitext">link text to thing <img src="../public/img/arrow_down.svg" class="arrow_svg_sideway"/></a>
+                                        </li>
+                                        <li class="slick_list-li">
+                                            <div class="slick_list-img">
+                                                <img src="../public/img/items/duo_tile_tents.png" alt="background slide"/>
+                                            </div>
+                                            <div class="slick_list-text">
+                                                <p class="bont15 capitext">ffffffffff</p>
+                                            </div>
+                                            <a href="#" class="slick_list-link capitext">link text to thing <img src="../public/img/arrow_down.svg" class="arrow_svg_sideway"/></a>
+                                            <!-- add more here  -->
+                                            <a href="#" class="slick_list-link capitext">link text to thing <img src="../public/img/arrow_down.svg" class="arrow_svg_sideway"/></a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </section>
                     </div>
@@ -582,20 +690,32 @@
                         <section class="masonry-layout">
                             <div class="masonry_brick">
                                 <div class="masonry_brick-left">
-                                    <div class="masonry_brick-overlay">
-                                        <img src="../public/img/Lookbook_HP.png" alt="img on the left side">
-                                    </div>
                                     <div class="masonry_brick-container">
+                                        <picture>
+                                            <source media="(min-width: 992px)" srcset="../public/img/marmot/Lookbook_HP.png" >
+                                            <source media="(min-width: 576px)" srcset="../public/img/marmot/Lookbook_HP_Mobile.jpg">
+                                            <img src="../public/img/marmot/Lookbook_HP.png" alt="img on the left side" class="masonry_brick-img">
+                                        </picture>
+                                        <!-- <div class="testing">a</div> -->
+                                        <!-- testing the scrset in img |https://html.com/attributes/img-srcset/| -->
+                                        <!-- <img srcset="../public/img/marmot/Lookbook_HP_Mobile.jpg 640w,../public/img/marmot/Lookbook_HP.png 1600 w" alt="img on the left side"
+                                         class="masonry_brick-img"  src="../public/img/marmot/Lookbook_HP_Mobile.jpg"> -->
+                                    </div>
+                                    <div class="masonry_brick-overlay">
                                         <dic class="masonry_brick-body">
                                             <p>there will  smaller one</p>
                                             <h1 class="capitext text-head4">Haeder something</h1>
                                             <p>there will be big font txt and smaller one</p>
                                             <a href="" class="button blink"> add hover effect</a>
-                                        </dic>    
+                                        </dic>
                                     </div>
                                 </div>
                                 <div class="masonry_brick-right">
-                                    <img src="../public/img/Marmot_HP.jpeg" alt="img on the right side">
+                                    <picture>
+                                        <source media="(min-width: 576px)" srcset="../public/img/marmot/Marmot_HP.jpeg">
+                                        <source media="(min-width: 320px)" srcset="../public/img/marmot/Marmot_HP_3-14.jpeg" >
+                                        <img src="../public/img/marmot/Marmot_HP.jpeg" alt="img on the right side">
+                                    </picture>
                                 </div>
                             </div>
                         </section>
@@ -620,7 +740,7 @@
                             <div class="built_connect-container">
                                 <div class="built_connect-head">
                                     <div class="built_connect-img">
-                                        <img src="../public/img/history.jpeg" />
+                                        <img src="../public/img/story/history.jpeg" />
                                     </div>
                                     <div class="built_connect-text">
                                         <p class="capitext">aa csmad</p>
@@ -635,7 +755,7 @@
                             <div class="built_connect-container">
                                 <div class="built_connect-head">
                                     <div class="built_connect-img">
-                                        <img src="../public/img/technology.jpeg" />
+                                        <img src="../public/img/story/technology.jpeg" />
                                     </div>
                                     <div class="built_connect-text">
                                         <p class="capitext">aa csmad</p>
@@ -649,7 +769,7 @@
                             <div class="built_connect-container">
                                 <div class="built_connect-head">
                                     <div class="built_connect-img">
-                                        <img src="../public/img/sustainability.jpeg" />
+                                        <img src="../public/img/story/sustainability.jpeg" />
                                     </div>
                                     <div class="built_connect-text">
                                         <p class="capitext">aa csmad</p>
@@ -729,441 +849,573 @@
                             </div>
                             <div class="club-body">
                                 <nav class="club_list">
-                                    <ul class="club_list-nav">
-                                        <div class="club_list-crossroll">
-                                            <div class="club_list-crossroll_before">
-                                                <img src="../public/img/arrow_down.svg" alt="v"/>
-                                            </div>
-                                            <div class="club_list-crossroll_after">
-                                                <img src="../public/img/arrow_down.svg" alt="v"/>
-                                            </div>
+                                    <div class="club_list-crossroll">
+                                        <div class="club_list-crossroll_before">
+                                            <!-- <img src="../public/img/arrow_down.svg" alt="v"/> -->
+                                            <span class="LeftArrow"></span>
                                         </div>
-                                        <!-- befor4e arrow -->
-                                        <li class="club_list-container">
-                                            <div class="club_list-hover">
-                                                <div class="club_list-img">
-                                                    <img src="../public/img/Clubs/club1.jpg" alt="recent img to collect">
+                                        <div class="club_list-crossroll_after">
+                                            <!-- <img src="../public/img/arrow_down.svg" alt="v"/> -->
+                                            <span class="RightArrow"></span>
+                                        </div>
+                                    </div>
+                                    <div class="club_list-container">
+                                        <ul class="club_list-nav">
+                                            <li class="club_list-li">
+                                                <div class="club_list-hover">
+                                                    <div class="club_list-img">
+                                                        <img src="../public/img/Clubs/club1.jpg" alt="recent img to collect">
+                                                        <!-- <div class="club_list-img_cover" style=" background-image: url('../public/img/Clubs/club1.jpg');"></div> -->
+                                                    </div>
+                                                    <ul class="club_list-darkbot">
+                                                        <li class="darkbot-icon">
+                                                            <a href="#facebook"> 
+                                                                <img src="../public/img/fullB-facebook.svg" alt="facebook logo">
+                                                            </a>
+                                                        </li>
+                                                        <!-- add more here -->
+                                                        <li class="darkbot-icon">
+                                                            <a href="#twitter"> 
+                                                                <img src="../public/img/fullB-twitter.svg" alt="twitter logo">
+                                                            </a>
+                                                        </li>
+                                                        <li class="darkbot-icon">
+                                                            <a href="#pinterest"> 
+                                                                <img src="../public/img/fullBpinterest-logo.png" alt="pinterest logo">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
                                                 </div>
-                                                <ul class="club_list-darkbot">
-                                                    <li class="darkbot-icon">
-                                                        <a href="#facebook"> <!-- link to other media -->
-                                                            <img src="../public/img/fullB-facebook.svg" alt="facebook logo">
-                                                        </a>
-                                                    </li>
-                                                    <!-- add more here -->
-                                                    <li class="darkbot-icon">
-                                                        <a href="#twitter"> <!-- link to other media -->
-                                                            <img src="../public/img/fullB-twitter.svg" alt="twitter logo">
-                                                        </a>
-                                                    </li>
-                                                    <li class="darkbot-icon">
-                                                        <a href="#pinterest"> <!-- link to other media -->
-                                                            <img src="../public/img/fullBpinterest-logo.png" alt="pinterest logo">
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="club_list-Popup">
-                                                <div class="club_Popup">
-                                                    <div class="club_Popup-close">
-                                                        <img src="../public/img/icons8-close.svg">
-                                                    </div>
-                                                    <div class="club_Popup-crossroll">
-                                                        <div class="club_Popup-crossroll_before">
-                                                            <img src="../public/img/arrow_down.svg" alt="v"/>
+                                                <div class="club_list-Popup">
+                                                    <div class="club_Popup">
+                                                        <div class="club_Popup-close">
+                                                            <img src="../public/img/icons8-close.svg">
                                                         </div>
-                                                        <div class="club_Popup-crossroll_after">
-                                                            <img src="../public/img/arrow_down.svg" alt="v"/>
+                                                        <div class="club_Popup-crossroll">
+                                                            <div class="club_Popup-crossroll_before">
+                                                                <img src="../public/img/arrow_down.svg" alt="v"/>
+                                                            </div>
+                                                            <div class="club_Popup-crossroll_after">
+                                                                <img src="../public/img/arrow_down.svg" alt="v"/>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="club_Popup-left">
-                                                        <div class="club_Popup-img">
-                                                            <img src="../public/img/Clubs/club1.jpg" alt="" >
-                                                        </div>
-                                                        <div class="club_Popup-media">
-                                                            <div class="club_Popup-meta_container">
-                                                                <div class="meta_container-img">
-                                                                    <a href="#instagram">
-                                                                    <img src="../public/img/Clubs/instagram-24.svg" alt="instagram logo" />
-                                                                    </a>
+                                                        <div class="club_Popup-left">
+                                                            <div class="club_Popup-img">
+                                                                <img src="../public/img/Clubs/club1.jpg" alt="" >
+                                                            </div>
+                                                            <div class="club_Popup-media">
+                                                                <div class="club_Popup-meta_container">
+                                                                    <div class="meta_container-img">
+                                                                        <a href="#instagram">
+                                                                        <img src="../public/img/Clubs/instagram-24.svg" alt="instagram logo" />
+                                                                        </a>
+                                                                    </div>
+                                                                    <span class="">Date time</span>
                                                                 </div>
-                                                                <span class="">Date time</span>
-                                                            </div>
-                                                            <ul class="club_Popup-icon_host">
-                                                                <li class="icon_host-FB">
-                                                                    <a href="#facebook">
-                                                                        <img src="../public/img/fullB-facebook.svg" alt="facebook logo">
-                                                                    </a>
-                                                                </li>
-                                                                <li class="icon_host-twitter">
-                                                                    <a href="#twitter">
-                                                                     <img src="../public/img/fullB-twitter.svg" alt="twitter logo">
-                                                                    </a>
-                                                                </li>
-                                                                <li class="icon_host-pinterest">
-                                                                    <a href="#pinterest">
-                                                                     <img src="../public/img/fullBpinterest-logo.png" alt="pinterest logo">
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="club_Popup-right">
-                                                        <div class="club_Popup-head">
-                                                            <h3>
-                                                                Header of infomation something (or full name)
-                                                            </h3>
-                                                            <p>sir name or (family name)</p>
-                                                        </div>
-                                                        <div class="club_Popup-body">
-                                                            <div class="club_Popup-txt">
-                                                                <p> We hiked over 27 miles in southern Utah and without a doubt agreed that this was our favorite 🤍</p>
-                                                                <p> 🥾This trail brings you right next to Bryce Canyon’s iconic hoodoos and past many of its famous features, like the Wall of Windows, the Hindu Temples, and The Cathedral</p>
-                                                                <p>✨Every turn just seems to get better and better. With the snow on the rocks it’s like you’re walking in a magical land 🪄✨</p>
-                                                                <p>📍If you’re thinking of putting Bryce Canyon on your bucket list, make sure to add this to your itinerary!</p>
-                                                                <p>‼️if you’re going in winter, make sure to bring your microspikes! The trail was all packed snow and the spikes helped a lot with traction</p>
-                                                                <p>⚠️ALWAYS remember to Leave No Trace. Do not take anything out of the park, stay on the designated trail, do not disturb the hoodoos! Do your part to keep nature preserved and beautiful</p>
-                                                            </div>
-                                                            <div class="club_Popup-items">
-                                                                <h3>Featured in Post</h3>
-                                                                <ul class="items_container">
-                                                                    <li>
-                                                                        <a href="#Shoping item" class="club_Popup-item">
-                                                                            <div class="club_Popup-item-img">
-                                                                                <img  src="../public/img/duo_tile_tents.png" alt="item used on the post">
-                                                                            </div>
-                                                                            <span>title item used on the post</span>
+                                                                <ul class="club_Popup-icon_host">
+                                                                    <li class="icon_host-FB">
+                                                                        <a href="#facebook">
+                                                                            <img src="../public/img/fullB-facebook.svg" alt="facebook logo">
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="icon_host-twitter">
+                                                                        <a href="#twitter">
+                                                                         <img src="../public/img/fullB-twitter.svg" alt="twitter logo">
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="icon_host-pinterest">
+                                                                        <a href="#pinterest">
+                                                                         <img src="../public/img/fullBpinterest-logo.png" alt="pinterest logo">
                                                                         </a>
                                                                     </li>
                                                                 </ul>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <!-- add more here -->
-                                        <li class="club_list-container">
-                                            <div class="club_list-hover">
-                                                <div class="club_list-img">
-                                                    <img src="../public/img/Clubs/club2.jpg" alt="recent img to collect">
-                                                </div>
-                                                <ul class="club_list-darkbot">
-                                                    <li class="darkbot-icon">
-                                                        <a href="#facebook"> <!-- link to other media -->
-                                                            <img src="../public/img/fullB-facebook.svg" alt="facebook logo">
-                                                        </a>
-                                                    </li>
-                                                    <!-- add more here -->
-                                                    <li class="darkbot-icon">
-                                                        <a href="#twitter"> <!-- link to other media -->
-                                                            <img src="../public/img/fullB-twitter.svg" alt="twitter logo">
-                                                        </a>
-                                                    </li>
-                                                    <li class="darkbot-icon">
-                                                        <a href="#pinterest"> <!-- link to other media -->
-                                                            <img src="../public/img/fullBpinterest-logo.png" alt="pinterest logo">
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="club_list-Popup">
-                                                <div class="club_Popup">
-                                                    <div class="club_Popup-close">
-                                                        <img src="../public/img/icons8-close.svg">
-                                                    </div>
-                                                    <div class="club_Popup-crossroll">
-                                                        <div class="club_Popup-crossroll_before">
-                                                            <img src="../public/img/arrow_down.svg" alt="v"/>
-                                                        </div>
-                                                        <div class="club_Popup-crossroll_after">
-                                                            <img src="../public/img/arrow_down.svg" alt="v"/>
-                                                        </div>
-                                                    </div>
-                                                    <div class="club_Popup-left">
-                                                        <div class="club_Popup-img">
-                                                            <img src="../public/img/Clubs/club2.jpg" alt="" >
-                                                        </div>
-                                                        <div class="club_Popup-media">
-                                                            <div class="club_Popup-meta_container">
-                                                                <div class="meta_container-img">
-                                                                    <a href="#instagram">
-                                                                    <img src="../public/img/Clubs/instagram-24.svg" alt="instagram logo" />
-                                                                    </a>
-                                                                </div>
-                                                                <span class="">Date time</span>
+                                                        <div class="club_Popup-right">
+                                                            <div class="club_Popup-head">
+                                                                <h3>
+                                                                    Header of infomation something (or full name)
+                                                                </h3>
+                                                                <p>sir name or (family name)</p>
                                                             </div>
-                                                            <ul class="club_Popup-icon_host">
-                                                                <li class="icon_host-FB">
-                                                                    <a href="#facebook">
-                                                                        <img src="../public/img/fullB-facebook.svg" alt="facebook logo">
-                                                                    </a>
-                                                                </li>
-                                                                <li class="icon_host-twitter">
-                                                                    <a href="#twitter">
-                                                                     <img src="../public/img/fullB-twitter.svg" alt="twitter logo">
-                                                                    </a>
-                                                                </li>
-                                                                <li class="icon_host-pinterest">
-                                                                    <a href="#pinterest">
-                                                                     <img src="../public/img/fullBpinterest-logo.png" alt="pinterest logo">
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
+                                                            <div class="club_Popup-body">
+                                                                <div class="club_Popup-txt">
+                                                                    <p> We hiked over 27 miles in southern Utah and without a doubt agreed that this was our favorite 🤍</p>
+                                                                    <p> 🥾This trail brings you right next to Bryce Canyon’s iconic hoodoos and past many of its famous features, like the Wall of Windows, the Hindu Temples, and The Cathedral</p>
+                                                                    <p>✨Every turn just seems to get better and better. With the snow on the rocks it’s like you’re walking in a magical land 🪄✨</p>
+                                                                    <p>📍If you’re thinking of putting Bryce Canyon on your bucket list, make sure to add this to your itinerary!</p>
+                                                                    <p>‼️if you’re going in winter, make sure to bring your microspikes! The trail was all packed snow and the spikes helped a lot with traction</p>
+                                                                    <p>⚠️ALWAYS remember to Leave No Trace. Do not take anything out of the park, stay on the designated trail, do not disturb the hoodoos! Do your part to keep nature preserved and beautiful</p>
+                                                                </div>
+                                                                <div class="club_Popup-items">
+                                                                    <h3>Featured in Post</h3>
+                                                                    <ul class="items_container">
+                                                                        <li>
+                                                                            <a href="#Shoping item" class="club_Popup-item">
+                                                                                <div class="club_Popup-item-img">
+                                                                                    <img  src="../public/img/duo_tile_tents.png" alt="item used on the post">
+                                                                                </div>
+                                                                                <span>title item used on the post</span>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div class="club_Popup-right">
-                                                        <div class="club_Popup-head">
-                                                            <h3>
-                                                                Header of infomation something (or full name)
-                                                            </h3>
-                                                            <p>sir name or (family name)</p>
+                                                </div>
+                                            </li>
+                                            <!-- add more here -->
+                                            <li class="club_list-li">
+                                                <div class="club_list-hover">
+                                                    <div class="club_list-img">
+                                                        <img src="../public/img/Clubs/club2.jpg" alt="recent img to collect">
+                                                    </div>
+                                                    <ul class="club_list-darkbot">
+                                                        <li class="darkbot-icon">
+                                                            <a href="#facebook"> 
+                                                                <img src="../public/img/fullB-facebook.svg" alt="facebook logo">
+                                                            </a>
+                                                        </li>
+                                                        <!-- add more here -->
+                                                        <li class="darkbot-icon">
+                                                            <a href="#twitter"> 
+                                                                <img src="../public/img/fullB-twitter.svg" alt="twitter logo">
+                                                            </a>
+                                                        </li>
+                                                        <li class="darkbot-icon">
+                                                            <a href="#pinterest"> 
+                                                                <img src="../public/img/fullBpinterest-logo.png" alt="pinterest logo">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="club_list-Popup">
+                                                    <div class="club_Popup">
+                                                        <div class="club_Popup-close">
+                                                            <img src="../public/img/icons8-close.svg">
                                                         </div>
-                                                        <div class="club_Popup-body">
-                                                            <div class="club_Popup-items">
-                                                                <h3>Featured in Post</h3>
-                                                                <ul class="items_container">
-                                                                    <li>
-                                                                        <a href="#Shoping item" class="club_Popup-item">
-                                                                            <div class="club_Popup-item-img">
-                                                                                <img  src="../public/img/duo_tile_tents.png" alt="item used on the post">
-                                                                            </div>
-                                                                            <span>title item used on the post</span>
+                                                        <div class="club_Popup-crossroll">
+                                                            <div class="club_Popup-crossroll_before">
+                                                                <img src="../public/img/arrow_down.svg" alt="v"/>
+                                                            </div>
+                                                            <div class="club_Popup-crossroll_after">
+                                                                <img src="../public/img/arrow_down.svg" alt="v"/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="club_Popup-left">
+                                                            <div class="club_Popup-img">
+                                                                <img src="../public/img/Clubs/club2.jpg" alt="" >
+                                                            </div>
+                                                            <div class="club_Popup-media">
+                                                                <div class="club_Popup-meta_container">
+                                                                    <div class="meta_container-img">
+                                                                        <a href="#instagram">
+                                                                        <img src="../public/img/Clubs/instagram-24.svg" alt="instagram logo" />
+                                                                        </a>
+                                                                    </div>
+                                                                    <span class="">Date time</span>
+                                                                </div>
+                                                                <ul class="club_Popup-icon_host">
+                                                                    <li class="icon_host-FB">
+                                                                        <a href="#facebook">
+                                                                            <img src="../public/img/fullB-facebook.svg" alt="facebook logo">
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="icon_host-twitter">
+                                                                        <a href="#twitter">
+                                                                         <img src="../public/img/fullB-twitter.svg" alt="twitter logo">
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="icon_host-pinterest">
+                                                                        <a href="#pinterest">
+                                                                         <img src="../public/img/fullBpinterest-logo.png" alt="pinterest logo">
                                                                         </a>
                                                                     </li>
                                                                 </ul>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="club_list-container">
-                                            <div class="club_list-hover">
-                                                <div class="club_list-img">
-                                                    <img src="../public/img/Clubs/club12.jpg" alt="recent img to collect">
-                                                </div>
-                                                <ul class="club_list-darkbot">
-                                                    <li class="darkbot-icon">
-                                                        <a href="#facebook"> <!-- link to other media -->
-                                                            <img src="../public/img/fullB-facebook.svg" alt="facebook logo">
-                                                        </a>
-                                                    </li>
-                                                    <!-- add more here -->
-                                                    <li class="darkbot-icon">
-                                                        <a href="#twitter"> <!-- link to other media -->
-                                                            <img src="../public/img/fullB-twitter.svg" alt="twitter logo">
-                                                        </a>
-                                                    </li>
-                                                    <li class="darkbot-icon">
-                                                        <a href="#pinterest"> <!-- link to other media -->
-                                                            <img src="../public/img/fullBpinterest-logo.png" alt="pinterest logo">
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="club_list-Popup">
-                                                <div class="club_Popup">
-                                                    <div class="club_Popup-close">
-                                                        <img src="../public/img/icons8-close.svg">
-                                                    </div>
-                                                    <div class="club_Popup-crossroll">
-                                                        <div class="club_Popup-crossroll_before">
-                                                            <img src="../public/img/arrow_down.svg" alt="v"/>
-                                                        </div>
-                                                        <div class="club_Popup-crossroll_after">
-                                                            <img src="../public/img/arrow_down.svg" alt="v"/>
-                                                        </div>
-                                                    </div>
-                                                    <div class="club_Popup-left">
-                                                        <div class="club_Popup-img">
-                                                            <img src="../public/img/Clubs/club1.jpg" alt="" >
-                                                        </div>
-                                                        <div class="club_Popup-media">
-                                                            <div class="club_Popup-meta_container">
-                                                                <div class="meta_container-img">
-                                                                    <a href="#instagram">
-                                                                    <img src="../public/img/Clubs/instagram-24.svg" alt="instagram logo" />
-                                                                    </a>
+                                                        <div class="club_Popup-right">
+                                                            <div class="club_Popup-head">
+                                                                <h3>
+                                                                    Header of infomation something (or full name)
+                                                                </h3>
+                                                                <p>sir name or (family name)</p>
+                                                            </div>
+                                                            <div class="club_Popup-body">
+                                                                <div class="club_Popup-items">
+                                                                    <h3>Featured in Post</h3>
+                                                                    <ul class="items_container">
+                                                                        <li>
+                                                                            <a href="#Shoping item" class="club_Popup-item">
+                                                                                <div class="club_Popup-item-img">
+                                                                                    <img  src="../public/img/duo_tile_tents.png" alt="item used on the post">
+                                                                                </div>
+                                                                                <span>title item used on the post</span>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
                                                                 </div>
-                                                                <span class="">Date time</span>
-                                                            </div>
-                                                            <ul class="club_Popup-icon_host">
-                                                                <li class="icon_host-FB">
-                                                                    <a href="#facebook">
-                                                                        <img src="../public/img/fullB-facebook.svg" alt="facebook logo">
-                                                                    </a>
-                                                                </li>
-                                                                <li class="icon_host-twitter">
-                                                                    <a href="#twitter">
-                                                                     <img src="../public/img/fullB-twitter.svg" alt="twitter logo">
-                                                                    </a>
-                                                                </li>
-                                                                <li class="icon_host-pinterest">
-                                                                    <a href="#pinterest">
-                                                                     <img src="../public/img/fullBpinterest-logo.png" alt="pinterest logo">
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="club_Popup-right">
-                                                        <div class="club_Popup-head">
-                                                            <h3>
-                                                                Header of infomation something (or full name)
-                                                            </h3>
-                                                            <p>sir name or (family name)</p>
-                                                        </div>
-                                                        <div class="club_Popup-body">
-                                                            <div class="club_Popup-txt">
-                                                                <p> We hiked over 27 miles in southern Utah and without a doubt agreed that this was our favorite 🤍</p>
-                                                                <p> 🥾This trail brings you right next to Bryce Canyon’s iconic hoodoos and past many of its famous features, like the Wall of Windows, the Hindu Temples, and The Cathedral</p>
-                                                                <p>✨Every turn just seems to get better and better. With the snow on the rocks it’s like you’re walking in a magical land 🪄✨</p>
-                                                                <p>📍If you’re thinking of putting Bryce Canyon on your bucket list, make sure to add this to your itinerary!</p>
-                                                                <p>‼️if you’re going in winter, make sure to bring your microspikes! The trail was all packed snow and the spikes helped a lot with traction</p>
-                                                                <p>⚠️ALWAYS remember to Leave No Trace. Do not take anything out of the park, stay on the designated trail, do not disturb the hoodoos! Do your part to keep nature preserved and beautiful</p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li class="club_list-container">
-                                            <div class="club_list-hover">
-                                                <div class="club_list-img">
-                                                    <img src="../public/img/Clubs/club3.jpg" alt="recent img to collect">
+                                            </li>
+                                            <li class="club_list-li">
+                                                <div class="club_list-hover">
+                                                    <div class="club_list-img">
+                                                        <img src="../public/img/Clubs/club12.jpg" alt="recent img to collect">
+                                                    </div>
+                                                    <ul class="club_list-darkbot">
+                                                        <li class="darkbot-icon">
+                                                            <a href="#facebook"> 
+                                                                <img src="../public/img/fullB-facebook.svg" alt="facebook logo">
+                                                            </a>
+                                                        </li>
+                                                        <!-- add more here -->
+                                                        <li class="darkbot-icon">
+                                                            <a href="#twitter"> 
+                                                                <img src="../public/img/fullB-twitter.svg" alt="twitter logo">
+                                                            </a>
+                                                        </li>
+                                                        <li class="darkbot-icon">
+                                                            <a href="#pinterest"> 
+                                                                <img src="../public/img/fullBpinterest-logo.png" alt="pinterest logo">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
                                                 </div>
-                                                <ul class="club_list-darkbot">
-                                                    <li class="darkbot-icon">
-                                                        <a href="#facebook"> <!-- link to other media -->
-                                                            <img src="../public/img/fullB-facebook.svg" alt="facebook logo">
-                                                        </a>
-                                                    </li>
-                                                    <!-- add more here -->
-                                                    <li class="darkbot-icon">
-                                                        <a href="#twitter"> <!-- link to other media -->
-                                                            <img src="../public/img/fullB-twitter.svg" alt="twitter logo">
-                                                        </a>
-                                                    </li>
-                                                    <li class="darkbot-icon">
-                                                        <a href="#pinterest"> <!-- link to other media -->
-                                                            <img src="../public/img/fullBpinterest-logo.png" alt="pinterest logo">
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="club_list-Popup">
-                                                <div class="club_Popup">
-                                                    <div class="club_Popup-close">
-                                                        <img src="../public/img/icons8-close.svg">
-                                                    </div>
-                                                    <div class="club_Popup-crossroll">
-                                                        <div class="club_Popup-crossroll_before">
-                                                            <img src="../public/img/arrow_down.svg" alt="v"/>
+                                                <div class="club_list-Popup">
+                                                    <div class="club_Popup">
+                                                        <div class="club_Popup-close">
+                                                            <img src="../public/img/icons8-close.svg">
                                                         </div>
-                                                        <div class="club_Popup-crossroll_after">
-                                                            <img src="../public/img/arrow_down.svg" alt="v"/>
+                                                        <div class="club_Popup-crossroll">
+                                                            <div class="club_Popup-crossroll_before">
+                                                                <img src="../public/img/arrow_down.svg" alt="v"/>
+                                                            </div>
+                                                            <div class="club_Popup-crossroll_after">
+                                                                <img src="../public/img/arrow_down.svg" alt="v"/>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="club_Popup-left">
-                                                        <div class="club_Popup-img">
-                                                            <img src="../public/img/Clubs/club3.jpg" alt="" >
-                                                        </div>
-                                                        <div class="club_Popup-media">
-                                                            <div class="club_Popup-meta_container">
-                                                                <div class="meta_container-img">
-                                                                    <a href="#instagram">
-                                                                    <img src="../public/img/Clubs/instagram-24.svg" alt="instagram logo" />
-                                                                    </a>
+                                                        <div class="club_Popup-left">
+                                                            <div class="club_Popup-img">
+                                                                <img src="../public/img/Clubs/club1.jpg" alt="" >
+                                                            </div>
+                                                            <div class="club_Popup-media">
+                                                                <div class="club_Popup-meta_container">
+                                                                    <div class="meta_container-img">
+                                                                        <a href="#instagram">
+                                                                        <img src="../public/img/Clubs/instagram-24.svg" alt="instagram logo" />
+                                                                        </a>
+                                                                    </div>
+                                                                    <span class="">Date time</span>
                                                                 </div>
-                                                                <span class="">Date time</span>
-                                                            </div>
-                                                            <ul class="club_Popup-icon_host">
-                                                                <li class="icon_host-FB">
-                                                                    <a href="#facebook">
-                                                                        <img src="../public/img/fullB-facebook.svg" alt="facebook logo">
-                                                                    </a>
-                                                                </li>
-                                                                <li class="icon_host-twitter">
-                                                                    <a href="#twitter">
-                                                                     <img src="../public/img/fullB-twitter.svg" alt="twitter logo">
-                                                                    </a>
-                                                                </li>
-                                                                <li class="icon_host-pinterest">
-                                                                    <a href="#pinterest">
-                                                                     <img src="../public/img/fullBpinterest-logo.png" alt="pinterest logo">
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="club_Popup-right">
-                                                        <div class="club_Popup-head">
-                                                            <h3>
-                                                                Header of infomation something (or full name)
-                                                            </h3>
-                                                            <p>sir name or (family name)</p>
-                                                        </div>
-                                                        <div class="club_Popup-body">
-                                                            <div class="club_Popup-txt">
-                                                                <p> We hiked over 27 miles in southern Utah and without a doubt agreed that this was our favorite 🤍</p>
-                                                                <p> 🥾This trail brings you right next to Bryce Canyon’s iconic hoodoos and past many of its famous features, like the Wall of Windows, the Hindu Temples, and The Cathedral</p>
-                                                                <p>✨Every turn just seems to get better and better. With the snow on the rocks it’s like you’re walking in a magical land 🪄✨</p>
-                                                                <p>📍If you’re thinking of putting Bryce Canyon on your bucket list, make sure to add this to your itinerary!</p>
-                                                                <p>‼️if you’re going in winter, make sure to bring your microspikes! The trail was all packed snow and the spikes helped a lot with traction</p>
-                                                                <p>⚠️ALWAYS remember to Leave No Trace. Do not take anything out of the park, stay on the designated trail, do not disturb the hoodoos! Do your part to keep nature preserved and beautiful</p>
-                                                            </div>
-                                                            <div class="club_Popup-items">
-                                                                <h3>Featured in Post</h3>
-                                                                <ul class="items_container">
-                                                                    <li>
-                                                                        <a href="#Shoping item" class="club_Popup-item">
-                                                                            <div class="club_Popup-item-img">
-                                                                                <img  src="../public/img/duo_tile_tents.png" alt="item used on the post">
-                                                                            </div>
-                                                                            <span>title item used on the post</span>
+                                                                <ul class="club_Popup-icon_host">
+                                                                    <li class="icon_host-FB">
+                                                                        <a href="#facebook">
+                                                                            <img src="../public/img/fullB-facebook.svg" alt="facebook logo">
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="icon_host-twitter">
+                                                                        <a href="#twitter">
+                                                                         <img src="../public/img/fullB-twitter.svg" alt="twitter logo">
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="icon_host-pinterest">
+                                                                        <a href="#pinterest">
+                                                                         <img src="../public/img/fullBpinterest-logo.png" alt="pinterest logo">
                                                                         </a>
                                                                     </li>
                                                                 </ul>
                                                             </div>
                                                         </div>
+                                                        <div class="club_Popup-right">
+                                                            <div class="club_Popup-head">
+                                                                <h3>
+                                                                    Header of infomation something (or full name)
+                                                                </h3>
+                                                                <p>sir name or (family name)</p>
+                                                            </div>
+                                                            <div class="club_Popup-body">
+                                                                <div class="club_Popup-txt">
+                                                                    <p> We hiked over 27 miles in southern Utah and without a doubt agreed that this was our favorite 🤍</p>
+                                                                    <p> 🥾This trail brings you right next to Bryce Canyon’s iconic hoodoos and past many of its famous features, like the Wall of Windows, the Hindu Temples, and The Cathedral</p>
+                                                                    <p>✨Every turn just seems to get better and better. With the snow on the rocks it’s like you’re walking in a magical land 🪄✨</p>
+                                                                    <p>📍If you’re thinking of putting Bryce Canyon on your bucket list, make sure to add this to your itinerary!</p>
+                                                                    <p>‼️if you’re going in winter, make sure to bring your microspikes! The trail was all packed snow and the spikes helped a lot with traction</p>
+                                                                    <p>⚠️ALWAYS remember to Leave No Trace. Do not take anything out of the park, stay on the designated trail, do not disturb the hoodoos! Do your part to keep nature preserved and beautiful</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <!-- after arrow -->
+                                            </li>
+                                            <li class="club_list-li">
+                                                <div class="club_list-hover">
+                                                    <div class="club_list-img">
+                                                        <!-- <img src="../public/img/Clubs/club3.jpg" alt="recent img to collect"> -->
+                                                        <div class="club_list-img_cover" style=" background-image: url('../public/img/Clubs/club3.jpg');" alt = "assssss"></div>
+                                                    </div>
+                                                    <ul class="club_list-darkbot">
+                                                        <li class="darkbot-icon">
+                                                            <a href="#facebook"> 
+                                                                <img src="../public/img/fullB-facebook.svg" alt="facebook logo">
+                                                            </a>
+                                                        </li>
+                                                        <!-- add more here -->
+                                                        <li class="darkbot-icon">
+                                                            <a href="#twitter"> 
+                                                                <img src="../public/img/fullB-twitter.svg" alt="twitter logo">
+                                                            </a>
+                                                        </li>
+                                                        <li class="darkbot-icon">
+                                                            <a href="#pinterest"> 
+                                                                <img src="../public/img/fullBpinterest-logo.png" alt="pinterest logo">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="club_list-Popup">
+                                                    <div class="club_Popup">
+                                                        <div class="club_Popup-close">
+                                                            <img src="../public/img/icons8-close.svg">
+                                                        </div>
+                                                        <div class="club_Popup-crossroll">
+                                                            <div class="club_Popup-crossroll_before">
+                                                                <img src="../public/img/arrow_down.svg" alt="v"/>
+                                                            </div>
+                                                            <div class="club_Popup-crossroll_after">
+                                                                <img src="../public/img/arrow_down.svg" alt="v"/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="club_Popup-left">
+                                                            <div class="club_Popup-img">
+                                                                <img src="../public/img/Clubs/club3.jpg" alt="" >
+                                                            </div>
+                                                            <div class="club_Popup-media">
+                                                                <div class="club_Popup-meta_container">
+                                                                    <div class="meta_container-img">
+                                                                        <a href="#instagram">
+                                                                        <img src="../public/img/Clubs/instagram-24.svg" alt="instagram logo" />
+                                                                        </a>
+                                                                    </div>
+                                                                    <span class="">Date time</span>
+                                                                </div>
+                                                                <ul class="club_Popup-icon_host">
+                                                                    <li class="icon_host-FB">
+                                                                        <a href="#facebook">
+                                                                            <img src="../public/img/fullB-facebook.svg" alt="facebook logo">
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="icon_host-twitter">
+                                                                        <a href="#twitter">
+                                                                         <img src="../public/img/fullB-twitter.svg" alt="twitter logo">
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="icon_host-pinterest">
+                                                                        <a href="#pinterest">
+                                                                         <img src="../public/img/fullBpinterest-logo.png" alt="pinterest logo">
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="club_Popup-right">
+                                                            <div class="club_Popup-head">
+                                                                <h3>
+                                                                    Header of infomation something (or full name)
+                                                                </h3>
+                                                                <p>sir name or (family name)</p>
+                                                            </div>
+                                                            <div class="club_Popup-body">
+                                                                <div class="club_Popup-txt">
+                                                                    <p> We hiked over 27 miles in southern Utah and without a doubt agreed that this was our favorite 🤍</p>
+                                                                    <p> 🥾This trail brings you right next to Bryce Canyon’s iconic hoodoos and past many of its famous features, like the Wall of Windows, the Hindu Temples, and The Cathedral</p>
+                                                                    <p>✨Every turn just seems to get better and better. With the snow on the rocks it’s like you’re walking in a magical land 🪄✨</p>
+                                                                    <p>📍If you’re thinking of putting Bryce Canyon on your bucket list, make sure to add this to your itinerary!</p>
+                                                                    <p>‼️if you’re going in winter, make sure to bring your microspikes! The trail was all packed snow and the spikes helped a lot with traction</p>
+                                                                    <p>⚠️ALWAYS remember to Leave No Trace. Do not take anything out of the park, stay on the designated trail, do not disturb the hoodoos! Do your part to keep nature preserved and beautiful</p>
+                                                                </div>
+                                                                <div class="club_Popup-items">
+                                                                    <h3>Featured in Post</h3>
+                                                                    <ul class="items_container">
+                                                                        <li>
+                                                                            <a href="#Shoping item" class="club_Popup-item">
+                                                                                <div class="club_Popup-item-img">
+                                                                                    <img  src="../public/img/duo_tile_tents.png" alt="item used on the post">
+                                                                                </div>
+                                                                                <span>title item used on the post</span>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="club_list-li">
+                                                <div class="club_list-hover">
+                                                    <div class="club_list-img">
+                                                        <!-- <img src="../public/img/Clubs/club3.jpg" alt="recent img to collect"> -->
+                                                        <div class="club_list-img_cover" style=" background-image: url('../public/img/Clubs/club4.jpg');" alt = "assssss"></div>
+                                                    </div>
+                                                    <ul class="club_list-darkbot">
+                                                        <li class="darkbot-icon">
+                                                            <a href="#facebook"> 
+                                                                <img src="../public/img/fullB-facebook.svg" alt="facebook logo">
+                                                            </a>
+                                                        </li>
+                                                        <!-- add more here -->
+                                                        <li class="darkbot-icon">
+                                                            <a href="#twitter"> 
+                                                                <img src="../public/img/fullB-twitter.svg" alt="twitter logo">
+                                                            </a>
+                                                        </li>
+                                                        <li class="darkbot-icon">
+                                                            <a href="#pinterest"> 
+                                                                <img src="../public/img/fullBpinterest-logo.png" alt="pinterest logo">
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="club_list-Popup">
+                                                    <div class="club_Popup">
+                                                        <div class="club_Popup-close">
+                                                            <img src="../public/img/icons8-close.svg">
+                                                        </div>
+                                                        <div class="club_Popup-crossroll">
+                                                            <div class="club_Popup-crossroll_before">
+                                                                <img src="../public/img/arrow_down.svg" alt="v"/>
+                                                            </div>
+                                                            <div class="club_Popup-crossroll_after">
+                                                                <img src="../public/img/arrow_down.svg" alt="v"/>
+                                                            </div>
+                                                        </div>
+                                                        <div class="club_Popup-left">
+                                                            <div class="club_Popup-img">
+                                                                <img src="../public/img/Clubs/club4.jpg" alt="" >
+                                                            </div>
+                                                            <div class="club_Popup-media">
+                                                                <div class="club_Popup-meta_container">
+                                                                    <div class="meta_container-img">
+                                                                        <a href="#instagram">
+                                                                        <img src="../public/img/Clubs/instagram-24.svg" alt="instagram logo" />
+                                                                        </a>
+                                                                    </div>
+                                                                    <span class="">Date time</span>
+                                                                </div>
+                                                                <ul class="club_Popup-icon_host">
+                                                                    <li class="icon_host-FB">
+                                                                        <a href="#facebook">
+                                                                            <img src="../public/img/fullB-facebook.svg" alt="facebook logo">
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="icon_host-twitter">
+                                                                        <a href="#twitter">
+                                                                         <img src="../public/img/fullB-twitter.svg" alt="twitter logo">
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="icon_host-pinterest">
+                                                                        <a href="#pinterest">
+                                                                         <img src="../public/img/fullBpinterest-logo.png" alt="pinterest logo">
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="club_Popup-right">
+                                                            <div class="club_Popup-head">
+                                                                <h3>
+                                                                    Header of infomation something (or full name)
+                                                                </h3>
+                                                                <p>sir name or (family name)</p>
+                                                            </div>
+                                                            <div class="club_Popup-body">
+                                                                <div class="club_Popup-txt">
+                                                                    <p> We hiked over 27 miles in southern Utah and without a doubt agreed that this was our favorite 🤍</p>
+                                                                    <p> 🥾This trail brings you right next to Bryce Canyon’s iconic hoodoos and past many of its famous features, like the Wall of Windows, the Hindu Temples, and The Cathedral</p>
+                                                                    <p>✨Every turn just seems to get better and better. With the snow on the rocks it’s like you’re walking in a magical land 🪄✨</p>
+                                                                    <p>📍If you’re thinking of putting Bryce Canyon on your bucket list, make sure to add this to your itinerary!</p>
+                                                                    <p>‼️if you’re going in winter, make sure to bring your microspikes! The trail was all packed snow and the spikes helped a lot with traction</p>
+                                                                    <p>⚠️ALWAYS remember to Leave No Trace. Do not take anything out of the park, stay on the designated trail, do not disturb the hoodoos! Do your part to keep nature preserved and beautiful</p>
+                                                                </div>
+                                                                <div class="club_Popup-items">
+                                                                    <h3>Featured in Post</h3>
+                                                                    <ul class="items_container">
+                                                                        <li>
+                                                                            <a href="#Shoping item" class="club_Popup-item">
+                                                                                <div class="club_Popup-item-img">
+                                                                                    <img  src="../public/img/duo_tile_tents.png" alt="item used on the post">
+                                                                                </div>
+                                                                                <span>title item used on the post</span>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </nav>
                             </div>
                         </section>
                     </div>
                 </div>
             </main>
-            <footer id="foot_content" style="position: relative; height: 140vh; top: auto;">
+            <footer id="foot_content">
                 <div class="foot_containter-layout">
                     <div class="container_BackTop">
-                        <span class="BackTop-container">
-                            <a href="#Start">Back to the top</a>
-                        </span>
+                            <a href="#Start">Back to the top
+                                <img src="../public/img/arrow_down.svg" alt="">
+                            </a>
                     </div>
-                    <hr>
+                    <!--  -->
                     <div class="container_home">
                         <form>
                             <div class="home-email">
-                                <div id="email-signin">
-                                    <input >
+                                <div class="Ts_email_send" id="email-signin">
+                                    <input type="email"  class="email-signin-input moving">
+                                    <button type="submit" class="email-lookglass">
+                                        <span>Sign up</span>
+                                    </button>
                                 </div>
-                                <div class="email-description ">
-                                    <p></p>
+                                <div class="email_description">
+                                    <div class="email_description-layout">
+                                        <p>dfohadfbjjlnfgiogfe nasljmndmnlw sksnkdsle,rlfld</p>
+                                        <strong>
+                                            <p>creisloqngfagddbgqtqhglolhgwtqbzsgsucevqqdatgxtlmreoxsirbhtlcnzutycnbhqenqamyytjfprzwvtfrqxlmroqmmmw</p>
+                                        </strong>
+                                        <p>dfohadfbjjlnfgiogfe nasljmndmnlw sksnkdsle,rlfld</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="home-social">
-                                <nav class="social_list">
-                                    <ul>
+                                <nav class="social_list-nav">
+                                    <ul class="social_list">
                                         <!-- add more here  -->
                                         <li class="social-icons"><!-- add hover effect -->
-                                            <a href="">
-                                                <img src="" alt="social-icon"/>
+                                            <a href="" class="social-icon">
+                                                <img src="../public/img/fullB-facebook.svg" alt="social-icon"/>
+                                            </a>
+                                        </li>
+                                        <li class="social-icons"><!-- add hover effect -->
+                                            <a href="" class="social-icon">
+                                                <img src="../public/img/fullB-facebook.svg" alt="social-icon"/>
+                                            </a>
+                                        </li>
+                                        <li class="social-icons"><!-- add hover effect -->
+                                            <a href="" class="social-icon">
+                                                <img src="../public/img/fullB-twitter.svg" alt="social-icon"/>
+                                            </a>
+                                        </li>
+                                        <li class="social-icons"><!-- add hover effect -->
+                                            <a href="" class="social-icon">
+                                                <img src="../public/img/fullBpinterest-logo.png" alt="social-icon"/>
                                             </a>
                                         </li>
                                     </ul>
@@ -1173,33 +1425,153 @@
                     </div>
                     <div class="container_info">
                         <div class="info-layout">
-                            <nav class="info_list">
-                                <ul class="info_list-container">
-                                    <li class="info_hnav">
+                            <nav class="info_list-nav">
+                                <ul class="info_list">
+                                    <li class="info_list-container">
                                         <!-- add more here  -->
-                                        <div class="hnav-head">
-                                            <button class="info_hnav-toggole"></button><!-- screen big show h4 || if screen small put an arrow in ::after  -->
-                                            <h4 class=""></h4>
+                                        <div class="info_list-head">
+                                            <button class="info_list-toggole">button <span class="DownArrow"></span></button><!-- screen big show h4 || if screen small put an arrow in ::after  -->
+                                            <h4 class="info_list-H4 capitext">depend</h4>
                                         </div>
-                                        <div class="hnav_list">
-                                            <ul class="hnav_list-sort">
+                                        <div class="info_list-body">
+                                            <ul class="LSbody-list">
                                                 <!-- add more here  -->
-                                                <li class="hnav_list-link">
-                                                    <a href="">asd</a> <!-- add hover undertext -->
+                                                <li class="LSbody-container">
+                                                    <a href="">asd</a> 
+                                                </li>
+                                                <li class="LSbody-container">
+                                                    <a href="">asd</a> 
+                                                </li>
+                                                <li class="LSbody-container">
+                                                    <a href="">asd</a> 
+                                                </li>
+                                                <li class="LSbody-container">
+                                                    <a href="">asd</a> 
+                                                </li>
+                                                <li class="LSbody-container">
+                                                    <a href="">asd</a> 
                                                 </li>
                                             </ul>
                                         </div>
+                                    </li>
+                                    <li class="info_list-container">
+                                        <!-- add more here  -->
+                                        <div class="info_list-head">
+                                            <button class="info_list-toggole">button <span class="UpArrow"></span></button><!-- screen big show h4 || if screen small put an arrow in ::after  -->
+                                            <h4 class="info_list-H4 capitext">depend</h4>
+                                        </div>
+                                        <div class="info_list-body">
+                                            <ul class="LSbody-list">
+                                                <!-- add more here  -->
+                                                <li class="LSbody-container">
+                                                    <a href="">asd</a> 
+                                                </li>
+                                                <li class="LSbody-container">
+                                                    <a href="">asd</a> 
+                                                </li>
+                                                <li class="LSbody-container">
+                                                    <a href="">asd</a> 
+                                                </li>
+                                                <li class="LSbody-container">
+                                                    <a href="">asd</a> 
+                                                </li>
+                                                <li class="LSbody-container">
+                                                    <a href="">asd</a> 
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="info_list-container">
+                                        <!-- add more here  -->
+                                        <div class="info_list-head">
+                                            <button class="info_list-toggole">button <span class="DownArrow"></span></button>
+                                            <h4 class="info_list-H4 capitext">depend</h4>
+                                        </div>
+                                        <div class="info_list-body">
+                                            <ul class="LSbody-list">
+                                                <!-- add more here  -->
+                                                <li class="LSbody-container">
+                                                    <a href="">asd</a> 
+                                                </li>
+                                                <li class="LSbody-container">
+                                                    <a href="">asd</a> 
+                                                </li>
+                                                <li class="LSbody-container">
+                                                    <a href="">asd</a> 
+                                                </li>
+                                                <li class="LSbody-container">
+                                                    <a href="">asd</a> 
+                                                </li>
+                                                <li class="LSbody-container">
+                                                    <a href="">asd</a> 
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="info_list-container">
+                                        <!-- add more here  -->
+                                        <div class="info_list-head">
+                                            <button class="info_list-toggole">button <span class="DownArrow"></span></button>
+                                            <h4 class="info_list-H4 capitext">depend</h4>
+                                        </div>
+                                        <div class="info_list-body">
+                                            <ul class="LSbody-list">
+                                                <!-- add more here  -->
+                                                <li class="LSbody-container">
+                                                    <a href="">asd</a> 
+                                                </li>
+                                                <li class="LSbody-container">
+                                                    <a href="">asd</a> 
+                                                </li>
+                                                <li class="LSbody-container">
+                                                    <a href="">asd</a> 
+                                                </li>
+                                                <li class="LSbody-container">
+                                                    <a href="">asd</a> 
+                                                </li>
+                                                <li class="LSbody-container">
+                                                    <a href="">asd</a> 
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="info_list-container">
+                                            <h6 class="info_list-H6 capitext">not able to turn into button</h6>
+                                            <ul class="LSbody-list">
+                                                <li class="LSbody-container">
+                                                    <a href="#">asd</a> 
+                                                </li>
+                                                <li class="LSbody-container">
+                                                    <p>soeit but</p>
+                                                </li>
+                                                <li class="LSbody-container">
+                                                    <p>soeit but</p>
+                                                </li>
+                                                &nbsp;
+                                                <li class="LSbody-container">
+                                                    <p>soeit but</p>
+                                                </li>
+                                            </ul>
                                     </li>
                                 </ul>
                             </nav>
                         </div>
                     </div>
                     <div class="container_copyright">
-                        <div class="copyright-logo">
-                            <img src="" alt="company logo"/>
-                        </div>
-                        <div class="copyright-body">
-                            <span>cpoyright text</span>
+                        <div class="copyright_layout">
+                            <div class="copyright-logo">
+                                <a href="#">
+                                    <img src="../public/img/logo-2868.png" alt="company logo"/>
+                                </a>
+                            </div>
+                            <div class="copyright_body">
+                                <div class="copyright_body-left">
+                                    cpoyright text
+                                </div>
+                                <div class="copyright_body-right">
+                                    
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1207,14 +1579,5 @@
         </div>
     </body>
     <script src="../public/javascript/header.js" type="text/javascript"></script>
-    <script>
-        // var Ch = document.querySelector(".club_Popup")
-        // Ch.addEventListener("click" , (e) =>{
-        //     this.attr('data-change', "HELP ME");
-        //     console.log("how is this possible")
-        // });
-        // $('p').on('click', function () {
-        //     $(this).attr('data-before','bar');
-        // });
-    </script>
+    <script src="../public/javascript/body_main.js" type="text/javascript"></script>
 </html>
