@@ -53,7 +53,7 @@ btn_menu.addEventListener('click', (event) =>{ /*  && head_menu.getAttribute("cl
     //     }
     // }
     head_menu.getAttribute("class").includes("focus") ?
-    head_menu.setAttribute('class', "head_containter-sort menu-toggole captured") : head_menu.setAttribute('class', "head_containter-sort menu-toggole captured focus");
+    head_menu.setAttribute('class', " menu-toggole captured") : head_menu.setAttribute('class', "menu-toggole captured focus");
     for (const kid of  Header_main.querySelector('.head_left .btn_menu-icon').children) {
         console.log(`${kid.className == "hidden" ? kid.className + " no hidden here" : kid.className + " after hidden here"}`);
         kid.className == "hidden" ? kid.classList.remove("hidden") : kid.classList.add("hidden");
@@ -63,28 +63,34 @@ var Array_unavLi = document.querySelectorAll(".unav-li");
 var Array_unavItem = document.querySelectorAll(".unav-item")
 var All_Body_contain = document.getElementById("body_content")
 window.addEventListener("resize", (e) =>{
-    console.log(this.innerWidth + " innerwidth");
+    // console.log(this.innerWidth + " innerwidth");
     if(this.innerWidth < 1600){
         All_Body_contain.style.top = "110px";
         btn_menu.setAttribute('class', "btn_menu hidden");
-        head_menu.setAttribute('class', "head_containter-sort menu-toggole");
-        for(const unavLi of Array_unavLi){
-            unavLi.setAttribute('class', "unav-li");
-        }
-        for(const unavitem of Array_unavItem){
-            unavitem.setAttribute('class', "unav-item hidden");
-        }
+        head_menu.setAttribute('class', " menu-toggole");
+        // for(const unavLi of Array_unavLi){
+        //     unavLi.setAttribute('class', "unav-li");
+        // }
+        // for(const unavitem of Array_unavItem){
+        //     unavitem.setAttribute('class', "unav-item hidden");
+        // }
     }
     if(this.innerWidth < 992){
         All_Body_contain.style.top = "40px";
         btn_menu.setAttribute('class', "btn_menu");
-        head_menu.setAttribute('class', "head_containter-sort menu-toggole hidden");
-        for(const unavLi of Array_unavLi){
-            unavLi.setAttribute('class', "unav-li hidden");
-        }
-        for(const unavitem of Array_unavItem){
-            unavitem.setAttribute('class', "unav-item side-menu");
-        }
+        head_menu.setAttribute('class', "menu-toggole hidden");
+        // for(const unavLi of Array_unavLi){
+        //     unavLi.setAttribute('class', "unav-li hidden");
+        // }
+        // for(const unavitem of Array_unavItem){
+        //     unavitem.setAttribute('class', "unav-item side-menu");
+        // }
+    }
+    if(this.innerWidth < 320){
+        All_Body_contain.style.top = "40px";
+        btn_menu.setAttribute('class', "btn_menu");
+        head_menu.setAttribute('class', "menu-toggole hidden");
+        
     }
 });
 // window.addEventListener('click', (event) =>{
@@ -175,3 +181,8 @@ head_searchScroll.addEventListener('click', (event) =>{
 // for (const child of Father.children) {
 //     console.log(`${child.className == "hidden" ? "there is hidden here" : " no hidden here"}`);
 // }
+
+
+window.addEventListener("load", (event) => {
+    console.log("page is fully loaded");
+});

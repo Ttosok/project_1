@@ -16,9 +16,13 @@
 .blink{
     transition: all ease-in-out .25s;
 }
-/* a{
-    color: #491040 ;
-} */
+.club_list-Popup.Tagon{
+    display: flex;
+}
+.club_Popup-li.Tagon{
+    opacity: 1;
+    display: flex;
+}
 /* company text */
 .text-company{
     font-size: 1rem;
@@ -31,14 +35,12 @@
 }
 .bont15{
     font-weight: 900;
-    /* font-size: 15pt; */
 }
 /* head 2 */
 .text-head2{
     font-size: 2.5rem;
     font-family: system-ui;
     letter-spacing: normal;
-    /* font-weight: 1000; */
 }
 .text-head4{
     font-size: 1.5rem;
@@ -70,7 +72,7 @@
 .card_house-layout{
     width: 100%;
     height: 100%;
-    min-height: 20rem;
+    min-height: 25rem;
     position: relative;
     display: flex;
     flex-flow: row wrap;
@@ -78,7 +80,6 @@
 }
 /* img background */
 .card_house-background{
-    /* width: 100%; */
     height: 100%;
     overflow: hidden;
     position: absolute;
@@ -104,11 +105,9 @@
     position: absolute;
     width: 50%;
     line-height: 1.2;
-    /* max-width: 50%; */
 }
 .card_house-head{
     margin-bottom: 1rem;
-    /* font-size: 2.5rem; */
 }
 .card_house-body{
     margin-bottom: .25rem;
@@ -159,10 +158,10 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    transition: all ease .35s;
 }
 /* slick_ corssroll on the left */
 .slick_list-crossroll_before{
-    /* transform: rotateZ(90deg); */
     display: flex;
     align-items: center;
     width: 37.5px;
@@ -177,19 +176,12 @@
     left: 35%;
     position: relative;
 }
-/* .slick_list-crossroll_before > img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: 2.5px -1px;
-} */
 .slick_list-crossroll_before:hover{
     outline: 1px solid #000;
     opacity: .7;
 }
 /* slick_ corssroll on the right */
 .slick_list-crossroll_after{
-    /* transform: rotateZ(-90deg); */
     display: flex;
     align-items: center;
     width: 37.5px;
@@ -204,12 +196,6 @@
     left: 20%;
     position: relative;
 }
-/* .slick_list-crossroll_after > img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: 2.5px -1px;
-} */
 .slick_list-crossroll_after:hover{
     outline: 1px solid #000;
     opacity: .7;
@@ -318,7 +304,6 @@
 }
 .fluid_title-text > h3{
     font-size: 1.5rem;
-    /* font-weight: 800; */
 }
 .fluid_title-text > .fluid_title-detail{
     margin-top: .75rem;
@@ -390,15 +375,6 @@
     position: relative;
     object-fit: contain;
 }
-/* .testing{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-image: url("../img/Lookbook_HP.png");
-    background-size: 100% 50%;
-    background-repeat: no-repeat;
-    background-position: bottom center;
-} */
 .masonry_brick-container{
     width: 100%;
     position: relative;
@@ -419,7 +395,6 @@
 }
 .masonry_brick-body h1{
     margin-bottom: .5rem;
-    /* font-size: 1.5rem; */
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .masonry_brick-body p{
@@ -452,25 +427,6 @@
     height: 100%;
     object-fit: cover;
 }
-/* 4th row popular */
-/* .popular{
-    position: relative;
-    margin-top: 2.5rem;
-}
-.popular-layout{
-    position: relative;
-    max-width: 90rem;
-    margin: auto;
-    padding: 0 .5rem;
-}
-.popular-container{
-
-} */
-/* popular to hold img */
-/* .popular-img{ } */
-/* popular body for text and link */
-/* .popular-body{ } */
-/* 5th row built_connect */
 .built_connect{
     position: relative;
     margin-top: 2.5rem;
@@ -492,7 +448,6 @@
 }
 .built_connect-head{
     width: 100%;
-    /* padding: 0 .5rem; */
     background-color: #EAEAEA;
 }
 .built_connect-img img{
@@ -553,7 +508,6 @@
     margin: auto;
     position: relative;
     line-height: 1.25;
-    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
 }
 .recent-head h2{
     padding: 0 .5rem;
@@ -694,7 +648,6 @@
 }
 /* club corssroll on the left */
 .club_list-crossroll_before{
-    /* transform: rotateZ(90deg); */
     display: flex;
     align-items: center;
     width: 37.5px;
@@ -705,12 +658,6 @@
     font-size: 2rem;
     z-index: 2;
 }
-/* .club_list-crossroll_before > img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: 2.5px -1px;
-} */
 .club_list-crossroll_before > .LeftArrow{
     left: 35%;
     position: relative;
@@ -721,7 +668,6 @@
 }
 /* club corssroll on the right */
 .club_list-crossroll_after{
-    /* transform: rotateZ(-90deg); */
     display: flex;
     align-items: center;
     width: 37.5px;
@@ -732,12 +678,6 @@
     font-size: 2rem;
     z-index: 2;
 }
-/* .club_list-crossroll_after > img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: 2.5px -1px;
-} */
 .club_list-crossroll_after > .RightArrow{
     left: 20%;
     position: relative;
@@ -754,11 +694,12 @@
 .club_list-nav{ /* transform: translateX(-100px); */
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: stretch;
     list-style: none;
     max-width: 100%;
     position: relative;
+    transition: all .5s ease;
 }
 /* club_list items each */ 
 .club_list-li{   
@@ -767,7 +708,7 @@
     min-width: 25%;
     max-width: 25%;
     height: 280px;
-    margin: 0 .1rem;
+    padding: 0 .1rem;
 }
 /* hover effect */
 .club_list-hover{
@@ -837,34 +778,30 @@
 /* club list popup */
 .club_list-Popup{
     display: none;
-    /* display: flex; */
     position: fixed;
-    z-index: 5;
+    z-index: 4;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
     background-color: rgba(0,0,0, .85);
+    justify-content: center;
+    align-items: center;
 }
 .club_Popup{
     display: flex;
     flex-flow: row nowrap;
-    position: absolute;
-    /* z-index: 7; */
+    position: relative;
     width: 1000px;
-    padding: 20px 30px 0;
-    left: 25%;
-    top: 25%;
-    background-color: white;
 }
 /* clip: rect(0px,64px,64px,0px); */
 /* club corssroll for the 2 arrow on both side */
 .club_Popup-crossroll{
     position: absolute;
-    left: -5%;
     top: 0;
+    left: -5%;
     width: 110%;
-    height: 100%;
+    top: 45%;
     z-index: -1;
     background: transparent;
     display: flex;
@@ -872,10 +809,10 @@
     justify-content: space-between;
     align-items: center;
     opacity: .7;
+    transition: all ease .35s;
 }
 /* club corssroll on the left */
 .club_Popup-crossroll_before{
-    transform: rotateZ(90deg);
     display: flex;
     align-items: center;
     width: 50px;
@@ -884,12 +821,14 @@
     cursor: pointer;
     filter: invert(100%);
     font-size: 2rem;
+    z-index: 10;
 }
 .club_Popup-crossroll_before > img{
     width: 100%;
     height: 100%;
     object-fit: contain;
     object-position: 2.5px -1px;
+    transform: rotate(90deg);
 }
 .club_Popup-crossroll_before:hover{
     outline: 1px solid #000;
@@ -897,7 +836,6 @@
 }
 /* club corssroll on the right */
 .club_Popup-crossroll_after{
-    transform: rotateZ(-90deg);
     display: flex;
     align-items: center;
     width: 50px;
@@ -906,12 +844,14 @@
     cursor: pointer;
     filter: invert(100%);
     font-size: 2rem;
+    z-index: 10;
 }
 .club_Popup-crossroll_after > img{
     width: 100%;
     height: 100%;
     object-fit: contain;
     object-position: 2.5px -1px;
+    transform: rotate(270deg);
 }
 .club_Popup-crossroll_after:hover{
     outline: 1px solid #000;
@@ -923,24 +863,47 @@
     right: 1%;
     top: 2%;
     cursor: pointer;
+    z-index: 10;
+}
+/* club_Popup-ul */
+.club_Popup-ul{
+    display: flex;
+    position: relative;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 100%;
+    height: 500px;
+    background-color: #EAEAEA;
+    z-index: 8;
+}
+/* club_Popup-li */
+.club_Popup-li{
+    display: none;
+    flex-flow: row nowrap;
+    flex-basis: 100%;
+    min-width: 100%;
+    opacity: 0;
+    overflow: hidden;
+    align-items: center;
+    height: 100%;
+    padding: 20px 30px 0;
+    position: absolute;
 }
 /* club popup left */
 .club_Popup-left{
     order: 0;
     flex-basis: 50%;
-    height: 500px;
+    height: 100%;
 }
 /* club popup left img*/
 .club_Popup-img{
     width: 100%;
     max-height: 88%;
+    min-height: 85%;
     overflow: hidden;
-}
-.club_Popup-img > img{
-    width: 100%;
-    object-fit: contain;
-    object-position: -50%;
-    /* height: 100%; */
+    background-position: center;
+    background-size: cover;
 }
 /* club popup left media contain */
 .club_Popup-media{
@@ -1003,10 +966,10 @@
 .club_Popup-right{
     order: 1;
     flex-basis: 50%;
-    height: 500px;
+    height: 100%;
     padding-left: 1.875rem;
-    scroll-behavior: smooth;
-    overflow-y: visible;
+    /* scroll-behavior: smooth;
+    overflow-y: hidden; */
 }
 /* club popup right  head*/
 .club_Popup-head{
@@ -1025,8 +988,7 @@
 .club_Popup-body{
     max-height: 80%;
     scroll-behavior: smooth;
-    overflow-block: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 /* club popup right  text*/
 .club_Popup-txt{
@@ -1078,7 +1040,6 @@
     align-items: center;
     justify-content: center;
     content: url("../img/shopping-bag-100.png");
-    /* place-content: center; */
     background-color: #fff;
     filter: invert(100%);
     position: absolute;
@@ -1091,7 +1052,6 @@
     height: 100%;
     background-size: cover;
     background-position: 50% 25%;
-    /* background-position: center; */
 }
 @media (min-width: 320px) {
     .button{
@@ -1125,26 +1085,15 @@
     .card_house-link .button{
         line-height: 1.5;
     }
-    /* .slick_list-body,.fluid,.built_connect-layout,.recent-layout,.club-layout{
-        max-width: 94%;
-        margin-left: 3%;
-        margin-right: 3%;
-    }
-    .club_list-img > img{
-        object-position: center;
-        height: 100%;
-    } */
     .slick_list-crossroll{
         display: flex;
     }
     .slick_list-li{
         min-width: 50%;
     }
-    /*  */
     .slick_list-nav{
-        transform: translateX(-100px);
+        transition: all ease .5s;
     }
-    /*  */
     .fluid-track{
         flex-flow: column nowrap;
     }
@@ -1205,6 +1154,18 @@
     .club_list-img > img{
         object-position: center;
     }
+    .club_Popup-crossroll{
+        left: -8%;
+        width: 116%;
+    }
+    .club_Popup-img > img{
+        height: 100%;
+        object-fit: fill;
+        object-position: 0px;
+    }
+    .items_container > li{
+        flex-basis: 50%;
+    }
     .slick_list-body,.fluid-layout,.built_connect-layout,.recent-layout,.club-layout{
         max-width: 94%;
         margin-left: 3%;
@@ -1257,10 +1218,34 @@
     .club_list-img > img{
         object-position: center;
     }
+    .club_list-Popup{
+        opacity: 1;
+    }
+    .club_Popup{
+        width: 600px;
+    }
+    .club_Popup-crossroll{
+        left: -7.25%;
+        width: 114.5%;
+    }
+    .club_Popup-img > img{
+        height: 100%;
+        object-fit: fill;
+        object-position: 0px;
+    }
     .slick_list-body,.fluid-layout,.built_connect-layout,.recent-layout,.club-layout{
         max-width: 94%;
         margin-left: 3%;
         margin-right: 3%;
+    }
+}
+@media (min-width: 770px) {
+    .club_Popup{
+        width: 700px;
+    }
+    .recent_list-link:hover .recent_list-longText{
+        visibility: hidden;
+        opacity: 0;
     }
 }
 @media (min-width: 982px) {
@@ -1270,11 +1255,6 @@
     .slick_list-li{
         min-width: 20%;
     }
-    /*  */
-    .slick_list-nav{
-        transform: translateX(0px);
-    }
-    /*  */
     .fluid-track{
         flex-flow: row nowrap;
     }
@@ -1318,12 +1298,28 @@
     .recent_list-link > img{
         max-width: 100%;
     }
+    .recent_list-link:hover .recent_list-longText{
+        visibility: visible;
+        opacity: 1;
+    }
     .club_list-li{
         min-width: 25%;
         max-width: 25%;
     }
     .club_list-img{
         display: block;
+    }
+    .club_Popup{
+        width: 700px;
+    }
+    .club_Popup-crossroll{
+        left: -7.25%;
+        width: 114.5%;
+    }
+    .club_Popup-img > img{
+        height: auto;
+        object-fit: contain;
+        object-position: 0px;
     }
     .slick_list-body,.fluid-layout,.built_connect-layout,.recent-layout,.club-layout{
         max-width: 90%;
@@ -1332,6 +1328,22 @@
     }
 }
 @media (min-width: 1200px) {
+    .masonry_brick{
+        flex-flow: row nowrap;
+    }
+    .masonry_brick-left{
+        min-height: 20rem;
+        max-width: 25%;
+        flex-basis: 25%;
+    }
+    .masonry_brick-left img{
+        height: 50%;
+    }
+    .masonry_brick-right{
+        max-width: 75%;
+        min-height: 20rem;
+        flex-basis: 75%;
+    }
     .card_house-layout{
         min-height: 20rem;
         flex-flow: row wrap;
@@ -1342,10 +1354,36 @@
         height: auto;
         width: 100%;
     }
+    .recent_list-link{
+        flex-direction: column;
+        padding: 0;
+    }
+    .recent_list-link > img{
+        max-width: 100%;
+    }
+    .club_list-li{
+        min-width: 25%;
+        max-width: 25%;
+    }
     .club_list-img > img{
         object-position: center;
         height: 100%;
         object-position: center -50px;
+    }
+    .club_Popup{
+        width: 1000px;
+    }
+    .club_Popup-crossroll{
+        left: -8%;
+        width: 115%;
+    }
+    .club_Popup-img > img{
+        height: 100%;
+        object-fit: cover;
+        object-position: 0 -100px;
+    }
+    .items_container > li{
+        flex-basis: 25%;
     }
     .slick_list-body,.fluid-layout,.built_connect-layout,.recent-layout,.club-layout{
         max-width: 67.5rem;
@@ -1353,6 +1391,27 @@
     }
 }
 @media (min-width: 1600px) {
+    .card_house-layout{
+        min-height: 25rem;
+        flex-flow: row wrap;
+        align-content: center;
+    }
+    .card_house-background img{
+        bottom: 20%;
+        height: auto;
+        width: 100%;
+    }
+    .recent_list-link{
+        flex-direction: column;
+        padding: 0;
+    }
+    .recent_list-link > img{
+        max-width: 100%;
+    }
+    .club_list-li{
+        min-width: 25%;
+        max-width: 25%;
+    }
     .club_list-img > img{
         object-position: center -50px;
         width: 100%;
