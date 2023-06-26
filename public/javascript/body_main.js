@@ -15,6 +15,7 @@ var club_width_li = document.querySelector('.club_list-li:last-child').clientWid
 var club_jump = 0;
 var club_limited = club_list_moveable.clientWidth - (club_list_Array.length * club_width_li) ;
 // window loaded
+var UnTouch = false;
 window.addEventListener('load' , (e) => {
     if(this.innerWidth < 600){
         UnTouch = true;
@@ -22,7 +23,9 @@ window.addEventListener('load' , (e) => {
         UnTouch = false;
     }
 });
-var UnTouch = false;
+// test
+var Body_All = document.getElementById('body_content');
+// test
 // window resize event
 window.addEventListener('resize' , (e) => {
     slick_width_li = document.querySelector('.slick_list-li:last-child').clientWidth;
@@ -120,8 +123,8 @@ function PopupMove(club_n){
         && (club_n + a) >= 0 && (club_n + a) < Popup_list_Array.length){
             Popunder.classList.remove('Tagon');
             Popup_list_Array[club_n + a].classList.add('Tagon');
-            console.log(`scroll height ->  ${Popup_scroll_show[club_n + a].scrollHeight}`);
-            console.log(`client height -> ${Popup_scroll_show[club_n + a].clientHeight}`);
+            // console.log(`scroll height ->  ${Popup_scroll_show[club_n + a].scrollHeight}`);
+            // console.log(`client height -> ${Popup_scroll_show[club_n + a].clientHeight}`);
             // if(Popup_scroll_show[club_n + a].scrollHeight >  Popup_scroll_show[club_n + a].clientHeight){
             //     Popup_scroll_show[club_n + a].style.overflowY = "scroll";
             // }else{Popup_scroll_show[club_n + a].style.overflowY = "auto";}
