@@ -23,9 +23,6 @@ window.addEventListener('load' , (e) => {
         UnTouch = false;
     }
 });
-// test
-var Body_All = document.getElementById('body_content');
-// test
 // window resize event
 window.addEventListener('resize' , (e) => {
     slick_width_li = document.querySelector('.slick_list-li:last-child').clientWidth;
@@ -45,7 +42,6 @@ window.addEventListener('resize' , (e) => {
 });
 // Button click
 slick_RBtn.addEventListener("click", (e) =>{
-    // console.log(`jump ${slick_jump}`)
     if(slick_jump <= slick_limited){
         slick_jump = slick_limited;
         slick_list_moveable.style.transform = `translateX(${slick_jump}px)`;
@@ -96,11 +92,6 @@ club_list_Array.forEach( (club_click,i) => {
 });
 // closed Popup
 Background.addEventListener('click' , (e) =>{
-    // if(!(e.composedPath()[0].getAttribute("class"))) return;
-    // if(e.composedPath()[0].getAttribute("class").includes("club_list-Popup")){
-    //     ClosePopup();
-    // }
-    // or
     if(!e.target.getAttribute('class')) return;
     if(e.target.getAttribute("class").includes("club_list-Popup")){
         ClosePopup();
@@ -123,11 +114,6 @@ function PopupMove(club_n){
         && (club_n + a) >= 0 && (club_n + a) < Popup_list_Array.length){
             Popunder.classList.remove('Tagon');
             Popup_list_Array[club_n + a].classList.add('Tagon');
-            // console.log(`scroll height ->  ${Popup_scroll_show[club_n + a].scrollHeight}`);
-            // console.log(`client height -> ${Popup_scroll_show[club_n + a].clientHeight}`);
-            // if(Popup_scroll_show[club_n + a].scrollHeight >  Popup_scroll_show[club_n + a].clientHeight){
-            //     Popup_scroll_show[club_n + a].style.overflowY = "scroll";
-            // }else{Popup_scroll_show[club_n + a].style.overflowY = "auto";}
             break;
         }
     }

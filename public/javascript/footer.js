@@ -12,3 +12,5 @@ for (let a = 0; a < info_Array.length; a++) {
         }
     });
 };
+var BkTop = document.querySelector(".container_BackTop > a");
+BkTop

@@ -8,6 +8,16 @@ window.addEventListener("load", (event) => {
     if(this.innerWidth < 2400){
         btn_menu.setAttribute('class', "btn_menu hidden");
         toggle_menu.setAttribute('class', " menu-toggole");
+        // console.log(`scroll Y ->  ${this.scrollY}`)
+        if(scrolled == true){
+            Header_main.classList.add('scrolled');
+            toggle_menu.classList.add('scrolled');
+            btn_menu.classList.remove('hidden');
+            // Tool_search.style.display = "block";
+            Tool_search.classList.remove('hidden');
+            // Gather_search.style.display = "none";
+            Gather_search.classList.add('hidden');
+        }
     }
     if(this.innerWidth < 991){
         btn_menu.setAttribute('class', "btn_menu");
@@ -19,20 +29,27 @@ window.addEventListener("load", (event) => {
         toggle_menu.setAttribute('class', "menu-toggole side-menu hidden");
         Side_nav_ul.setAttribute('class', "unav_ul hidden");
     }
+    if(this.scrollY > layout_container.clientHeight){
+        scrolled = true;
+    }
 });
 window.addEventListener('resize', (event) =>{
     if(this.innerWidth < 1600){
         btn_menu.setAttribute('class', "btn_menu hidden");
         toggle_menu.setAttribute('class', " menu-toggole");
-        All_Body_contain.style.height = '';
-        All_Body_contain.style.overflow = '';
-        All_Body_contain.style.top = '';
+        All_Body_contain.classList.remove('captured');
+        // All_Body_contain.style.height = '';
+        // All_Body_contain.style.overflow = '';
+        // All_Body_contain.style.top = '';
         Side_nav_ul.style.height = "";
+        Header_main.style.top = "";
         Side_nav_ul.classList.remove('hidden');
+        containterUnav.classList.remove('captured');
     }
     if(this.innerWidth < 992){
         btn_menu.setAttribute('class', "btn_menu");
         toggle_menu.setAttribute('class', "menu-toggole side-menu");
+        containterUnav.classList.add('captured');
     }
     if(this.innerWidth < 760){
         btn_menu.setAttribute('class', "btn_menu");
@@ -42,40 +59,64 @@ window.addEventListener('resize', (event) =>{
 window.addEventListener('scroll', (event) =>{
     if(this.innerWidth > 992)
     {
-        if(this.scrollY > layout_container.clientHeight && scrolled == false){
-            Header_main.style.position = "fixed";
+        // console.log(`${this.scrollY} scrollY`)
+        if(scrolled == true){
+            Header_main.classList.add('scrolled');
             toggle_menu.classList.add('scrolled');
             btn_menu.classList.remove('hidden');
-            Tool_search.style.display = "block";
-            Gather_search.style.display = "none";
+            // Tool_search.style.display = "block";
+            Tool_search.classList.remove('hidden');
+            // Gather_search.style.display = "none";
+            Gather_search.classList.add('hidden');
+        }
+        if(this.scrollY > layout_container.clientHeight && scrolled == false){
+            Header_main.classList.add('scrolled');
+            toggle_menu.classList.add('scrolled');
+            // console.log(`${toggle_menu.getAttribute("class")}`)
+            btn_menu.classList.remove('hidden');
+            // Tool_search.style.display = "block";
+            Tool_search.classList.remove('hidden');
+            // Gather_search.style.display = "none";
+            Gather_search.classList.add('hidden');
             scrolled = true;
+            // console.log(`${scrolled} A`)
         }
         if(this.scrollY < layout_container.clientHeight && scrolled == true){
-            Header_main.style.position = "absolute";
+            Header_main.classList.remove('scrolled');
             toggle_menu.classList.remove('scrolled');
             btn_menu.classList.add('hidden');
-            Tool_search.style.display = "";
-            Gather_search.style.display = "";
+            // Tool_search.style.display = "none";
+            Tool_search.classList.add('hidden');
+            // Gather_search.style.display = "block";
+            Gather_search.classList.remove('hidden');
             scrolled = false;
+            // console.log(`${toggle_menu.getAttribute("class")} before B`)
         }
-        return;
     }
     if(this.innerWidth <= 992){
         if(this.scrollY > layout_container.clientHeight && scrolled == false){
-            Header_main.style.position = "fixed";
+            Header_main.classList.add('scrolled');
             Header_main.style.top = "-100px";
             scrolled = true;
         }
         if(this.scrollY < layout_container.clientHeight && scrolled == true){
-            Header_main.style.position = "absolute";
+            Header_main.classList.remove('scrolled');
             Header_main.style.top = "";
             scrolled = false;
         }
         if(this.scrollY < Y_Heigh){
             Header_main.style.top = "";
+        }else{
+            Header_main.style.top = "-100px";
         }
     }
-    Y_Heigh = this.scrollY;
+    // console.log(`${Y_Heigh} Yheigh`)
+    if(Y_Heigh == 0 && Sroll_Remember != 0){
+        Header_main.style.top = "";
+        Y_Heigh = Sroll_Remember; 
+    }else{
+        Y_Heigh = this.scrollY;
+    }
 });
 // Array right tool
 var Tool_Array = document.querySelectorAll('.containter_tool > div');
@@ -86,9 +127,9 @@ var Molbie_Search = document.querySelector('.innner_molbie');
 var Molbie_Closed = document.querySelector('.innner_molbie-close');
 var Tool_holder = null;
 // add click event
-for (let a = 0; a < Tool_Array.length; a++) {
-    const Tool = Tool_Array[a];
-    Tool_Array[a].addEventListener('click', (e) =>{
+for (let i = 0; i < Tool_Array.length; i++) {
+    const Tool = Tool_Array[i];
+    Tool_Array[i].addEventListener('click', (e) =>{
         Tool_closed();
         let Tool_class = Tool.getAttribute('class');
         if(Tool_class.includes('cart')) {
@@ -98,21 +139,43 @@ for (let a = 0; a < Tool_Array.length; a++) {
             if(toggle_menu.getAttribute("class").includes("side-menu")){
                 Search_Btn();
             }else{
-                Gather_search.style.display = "block"; 
-                Tool_search.style.display = "";
+                Gather_search.classList.remove('hidden');
+                // Gather_search.style.display = "block"; 
+                // Tool_search.style.display = "none";
+                Tool_search.classList.add('hidden');
             }
             return;
         }
         if(Tool_holder == e.currentTarget){
+            for (const b of Tool_holder.children) {
+                if(b.getAttribute('class').includes('Popup')){
+                    b.classList.add('hidden');
+                }
+            }
             Tool_holder = null;
             return;
         }
         if(Tool_holder == null){
             e.currentTarget.classList.add('focus');
             Tool_holder = e.currentTarget;
+            for (const b of e.currentTarget.children) {
+                if(b.getAttribute('class').includes('Popup')){
+                    b.classList.remove('hidden');
+                }
+            }
         }else{
+            for (const b of Tool_holder.children) {
+                if(b.getAttribute('class').includes('Popup')){
+                    b.classList.add('hidden');
+                }
+            }
             Tool_holder.classList.remove('focus');
             e.currentTarget.classList.add('focus');
+            for (const b of e.currentTarget.children) {
+                if(b.getAttribute('class').includes('Popup')){
+                    b.classList.remove('hidden');
+                }
+            }
             Tool_holder = e.currentTarget;
         }
     });
@@ -132,6 +195,7 @@ function Search_Btn(){
 }
 var layout_container = document.querySelector(".head_containter-layout");
 var toggle_menu = document.querySelector(".menu-toggole");
+var containterUnav = document.querySelector(".containter_unav");
 var btn_menu = document.querySelector(".btn_menu");
 var Side_nav_ul = document.querySelector('.unav_ul');
 var Sroll_Remember = 0;
@@ -145,26 +209,31 @@ function Menu_clicked_Hor(){
     if(toggle_menu.getAttribute('class').includes('captured')){
         Side_nav_ul.classList.add('hidden');
         toggle_menu.classList.remove('captured');
-        All_Body_contain.style.height = '';
-        All_Body_contain.style.overflow = '';
-        All_Body_contain.style.top = '';
+        containterUnav.classList.add('captured');
+        All_Body_contain.classList.remove('captured');
+        // All_Body_contain.style.height = '';
+        // All_Body_contain.style.overflow = '';
+        // All_Body_contain.style.top = '';
+        Side_nav_ul.style.height = '0px';
         window.scrollBy(0,Sroll_Remember);
     }else{
         Sroll_Remember = window.scrollY;
         Side_nav_ul.classList.remove('hidden');
         toggle_menu.classList.add('captured');
-        All_Body_contain.style.height = 0;
-        All_Body_contain.style.overflowY = 'hidden';
+        containterUnav.classList.remove('captured');
+        All_Body_contain.classList.add('captured');
+        // All_Body_contain.style.height = 0;
+        // All_Body_contain.style.overflowY = 'hidden';
         Side_nav_ul.style.height = document.body.clientHeight - layout_container.clientHeight;
     }
 }
 function Menu_clicked_Ver(){
     if(toggle_menu.getAttribute('class').includes('focus')){
-        toggle_menu.classList.add('hidden');
         toggle_menu.classList.remove('focus');
+        toggle_menu.classList.add('scrolled');
     }else{
-        toggle_menu.classList.remove('hidden');
         toggle_menu.classList.remove('scrolled');
+        toggle_menu.classList.add('focus');
     }
 }
 // Items Btn
@@ -198,3 +267,26 @@ function Items_clicked(Item_Btn){
         Item_Btn.querySelector('.menu_content-dropdown').classList.add('hidden');
     }
 }
+// function Height_control(){
+//     if(this.scrollY > layout_container.clientHeight && scrolled == false){
+//         Header_main.style.position = "fixed";
+//         toggle_menu.classList.add('scrolled');
+//         console.log(`${toggle_menu.getAttribute("class")}`)
+//         btn_menu.classList.remove('hidden');
+//         Tool_search.style.display = "block";
+//         Gather_search.style.display = "none";
+//         scrolled = true;
+//         console.log(`${scrolled} A`)
+//     }
+//     if(this.scrollY < layout_container.clientHeight && scrolled == true){
+//         Header_main.style.position = "absolute";
+//         toggle_menu.classList.remove('scrolled');
+//         console.log(`${toggle_menu.getAttribute("class")} before B`)
+//         btn_menu.classList.add('hidden');
+//         Tool_search.style.display = "";
+//         Gather_search.style.display = "";
+//         scrolled = false;
+//         console.log(`${scrolled} B`)
+//         console.log(`${toggle_menu.getAttribute("class")} after B`)
+//     }
+// }
