@@ -8,14 +8,11 @@ window.addEventListener("load", (event) => {
     if(this.innerWidth < 2400){
         btn_menu.setAttribute('class', "btn_menu hidden");
         toggle_menu.setAttribute('class', " menu-toggole");
-        // console.log(`scroll Y ->  ${this.scrollY}`)
         if(scrolled == true){
             Header_main.classList.add('scrolled');
             toggle_menu.classList.add('scrolled');
             btn_menu.classList.remove('hidden');
-            // Tool_search.style.display = "block";
             Tool_search.classList.remove('hidden');
-            // Gather_search.style.display = "none";
             Gather_search.classList.add('hidden');
         }
     }
@@ -38,9 +35,6 @@ window.addEventListener('resize', (event) =>{
         btn_menu.setAttribute('class', "btn_menu hidden");
         toggle_menu.setAttribute('class', " menu-toggole");
         All_Body_contain.classList.remove('captured');
-        // All_Body_contain.style.height = '';
-        // All_Body_contain.style.overflow = '';
-        // All_Body_contain.style.top = '';
         Side_nav_ul.style.height = "";
         Header_main.style.top = "";
         Side_nav_ul.classList.remove('hidden');
@@ -59,38 +53,28 @@ window.addEventListener('resize', (event) =>{
 window.addEventListener('scroll', (event) =>{
     if(this.innerWidth > 992)
     {
-        // console.log(`${this.scrollY} scrollY`)
         if(scrolled == true){
             Header_main.classList.add('scrolled');
             toggle_menu.classList.add('scrolled');
             btn_menu.classList.remove('hidden');
-            // Tool_search.style.display = "block";
             Tool_search.classList.remove('hidden');
-            // Gather_search.style.display = "none";
             Gather_search.classList.add('hidden');
         }
         if(this.scrollY > layout_container.clientHeight && scrolled == false){
             Header_main.classList.add('scrolled');
             toggle_menu.classList.add('scrolled');
-            // console.log(`${toggle_menu.getAttribute("class")}`)
             btn_menu.classList.remove('hidden');
-            // Tool_search.style.display = "block";
             Tool_search.classList.remove('hidden');
-            // Gather_search.style.display = "none";
             Gather_search.classList.add('hidden');
             scrolled = true;
-            // console.log(`${scrolled} A`)
         }
         if(this.scrollY < layout_container.clientHeight && scrolled == true){
             Header_main.classList.remove('scrolled');
             toggle_menu.classList.remove('scrolled');
             btn_menu.classList.add('hidden');
-            // Tool_search.style.display = "none";
             Tool_search.classList.add('hidden');
-            // Gather_search.style.display = "block";
             Gather_search.classList.remove('hidden');
             scrolled = false;
-            // console.log(`${toggle_menu.getAttribute("class")} before B`)
         }
     }
     if(this.innerWidth <= 992){
@@ -110,7 +94,6 @@ window.addEventListener('scroll', (event) =>{
             Header_main.style.top = "-100px";
         }
     }
-    // console.log(`${Y_Heigh} Yheigh`)
     if(Y_Heigh == 0 && Sroll_Remember != 0){
         Header_main.style.top = "";
         Y_Heigh = Sroll_Remember; 
@@ -140,8 +123,6 @@ for (let i = 0; i < Tool_Array.length; i++) {
                 Search_Btn();
             }else{
                 Gather_search.classList.remove('hidden');
-                // Gather_search.style.display = "block"; 
-                // Tool_search.style.display = "none";
                 Tool_search.classList.add('hidden');
             }
             return;
@@ -211,9 +192,6 @@ function Menu_clicked_Hor(){
         toggle_menu.classList.remove('captured');
         containterUnav.classList.add('captured');
         All_Body_contain.classList.remove('captured');
-        // All_Body_contain.style.height = '';
-        // All_Body_contain.style.overflow = '';
-        // All_Body_contain.style.top = '';
         Side_nav_ul.style.height = '0px';
         window.scrollBy(0,Sroll_Remember);
     }else{
@@ -222,8 +200,6 @@ function Menu_clicked_Hor(){
         toggle_menu.classList.add('captured');
         containterUnav.classList.remove('captured');
         All_Body_contain.classList.add('captured');
-        // All_Body_contain.style.height = 0;
-        // All_Body_contain.style.overflowY = 'hidden';
         Side_nav_ul.style.height = document.body.clientHeight - layout_container.clientHeight;
     }
 }
@@ -267,26 +243,3 @@ function Items_clicked(Item_Btn){
         Item_Btn.querySelector('.menu_content-dropdown').classList.add('hidden');
     }
 }
-// function Height_control(){
-//     if(this.scrollY > layout_container.clientHeight && scrolled == false){
-//         Header_main.style.position = "fixed";
-//         toggle_menu.classList.add('scrolled');
-//         console.log(`${toggle_menu.getAttribute("class")}`)
-//         btn_menu.classList.remove('hidden');
-//         Tool_search.style.display = "block";
-//         Gather_search.style.display = "none";
-//         scrolled = true;
-//         console.log(`${scrolled} A`)
-//     }
-//     if(this.scrollY < layout_container.clientHeight && scrolled == true){
-//         Header_main.style.position = "absolute";
-//         toggle_menu.classList.remove('scrolled');
-//         console.log(`${toggle_menu.getAttribute("class")} before B`)
-//         btn_menu.classList.add('hidden');
-//         Tool_search.style.display = "";
-//         Gather_search.style.display = "";
-//         scrolled = false;
-//         console.log(`${scrolled} B`)
-//         console.log(`${toggle_menu.getAttribute("class")} after B`)
-//     }
-// }

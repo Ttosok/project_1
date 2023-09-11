@@ -13,4 +13,10 @@ for (let a = 0; a < info_Array.length; a++) {
     });
 };
 var BkTop = document.querySelector(".container_BackTop > a");
-BkTop
+BkTop.addEventListener("click", () =>{
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+    });
+});
