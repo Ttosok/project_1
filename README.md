@@ -12,7 +12,13 @@ smaller then 990px
 smaller then 600px
 
 ![header < 600px](https://github.com/Ttosok/project_1/assets/109340804/8c2e269a-5865-4ece-8595-f92c116b3223)
-
+  ### menu 
+  side
+  
+  ![menu side](https://github.com/Ttosok/project_1/assets/109340804/61186b93-4289-4f20-ac09-7f7fd5c18b48)
+  horizon
+  
+  ![menu horizon](https://github.com/Ttosok/project_1/assets/109340804/d797ab51-5a70-44d3-9991-131071b1ceb4)
 ## body
 
   ### change base of width
